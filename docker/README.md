@@ -23,7 +23,7 @@ The environment is customized by creating and editing the `docker/.env` file (wh
 
 | Variable                 | Default           | Description                                                                                                                                             |
 | ------------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `COMPOSE_PROJECT_NAME`     | `wp-composer-pkg` | A unique name for the project's Docker containers and networks. Changing this prevents conflicts with other Docker projects.                            |
+| `COMPOSE_PROJECT_NAME`     | `wp-table-manager` | A unique name for the project's Docker containers and networks. Changing this prevents conflicts with other Docker projects.                            |
 | `PHP_VERSION`              | `8.4`             | The version of PHP to build and run in the `app` container.                                                                                               |
 | `UID`                      | `1000`            | The user ID to run as inside the `app` container. **This should match your host user's ID** to avoid file permission issues.                              |
 | `GID`                      | `1000`            | The group ID to run as inside the `app` container. **This should match your host user's group ID**.                                                     |

@@ -5,7 +5,7 @@
 # Node Modules
 /node_modules/
 # /package-lock.json
- 
+
 # PHPUnit
 /phpunit.xml
 /.phpunit.result.cache
@@ -31,6 +31,7 @@ Thumbs.db
 *.tmp
 /reports/
 /logs/
+/old
 
 # Environment
 /docker/.env

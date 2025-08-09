@@ -1,5 +1,5 @@
 {
-    "name": "wptechnix/wp-composer-package-template",
+    "name": "wptechnix/wp-table-manager",
     "version": "0.1.0",
     "description": "A simple description.",
     "type": "library",
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "WPTechnix\\WPComposerPackage\\": "src/"
+            "WPTechnix\\WPTableManager\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WPTechnix\\WPComposerPackage\\Tests\\": "tests/"
+            "WPTechnix\\WPTableManager\\Tests\\": "tests/"
         }
     },
     "scripts": {

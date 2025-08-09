@@ -14,6 +14,8 @@ RUN apk add --no-cache \
     oniguruma-dev \
     libxml2-dev \
     icu-dev \
+    subversion \
+    mysql-client \
     $PHPIZE_DEPS \
     && rm -rf /var/cache/apk/*
 
@@ -22,7 +24,9 @@ RUN docker-php-ext-install \
         bcmath \
         exif \
         intl \
-        mbstring
+        mbstring \
+        pdo_mysql \
+        mysqli
 
 # Install and configure Xdebug
 RUN pecl install xdebug \

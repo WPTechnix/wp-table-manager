@@ -15,10 +15,6 @@ parameters:
     strictRules:
         noVariableVariables: false
 
-    ignoreErrors:
-        - identifier: empty.notAllowed
-        - message: '#Parameter \#1 \$query of method wpdb::prepare\(\) expects literal-string, non-falsy-string#'
-
     treatPhpDocTypesAsCertain: false
 
 includes:

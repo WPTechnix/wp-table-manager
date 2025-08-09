@@ -3,7 +3,6 @@
 # This script runs unit tests before allowing a push to the remote repository.
 
 # Exit immediately if a command exits with a non-zero status.
-set -euo pipefail
 
 echo "🔍 Running pre-push checks..."
 

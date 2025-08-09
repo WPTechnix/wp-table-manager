@@ -6,10 +6,8 @@ services:
         USER_ID: ${UID:-1000}
         GROUP_ID: ${GID:-1000}
         PHP_VERSION: ${PHP_VERSION:-8.4}
-    container_name: ${COMPOSE_PROJECT_NAME:-wp-composer-pkg}-php
+    container_name: ${COMPOSE_PROJECT_NAME:-wp-table-manager}-php
     user: "${UID:-1000}:${GID:-1000}"
-    env_file:
-      - .env
     volumes:
       - ../:/app
       - wp_pkg_tests_data:/tmp/wordpress-tests-suite
@@ -17,17 +15,25 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - wp-composer-pkg
+      - wp-table-manager
     depends_on:
       - db
 
   db:
     image: mysql:8.0
-    container_name: ${COMPOSE_PROJECT_NAME:-wp-composer-pkg}-db
+    container_name: ${COMPOSE_PROJECT_NAME:-wp-table-manager}-db
     restart: unless-stopped
     ports:
       - "${MYSQL_PORT:-3306}:3306"
     environment:
+      XDEBUG_MODE: ${XDEBUG_MODE:-off}
+      XDEBUG_START_WITH_REQUEST: ${XDEBUG_START_WITH_REQUEST:-no}
+      XDEBUG_DISCOVER_CLIENT_HOST: ${XDEBUG_DISCOVER_CLIENT_HOST:-false}
+      XDEBUG_CLIENT_HOST: ${XDEBUG_CLIENT_HOST:-host.docker.internal}
+      XDEBUG_CLIENT_PORT: ${XDEBUG_CLIENT_PORT:-9000}
+      XDEBUG_IDEKEY: ${XDEBUG_IDEKEY:-PHPSTORM}
+      XDEBUG_LOG_LEVEL: ${XDEBUG_LOG_LEVEL:-0}
+      XDEBUG_MAX_NESTING_LEVEL: ${XDEBUG_MAX_NESTING_LEVEL:-512}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
       MYSQL_DATABASE: ${WORDPRESS_TESTS_DATABASE:-wordpress_tests}
       MYSQL_USER: ${MYSQL_USER:-wordpress}
@@ -35,7 +41,7 @@ services:
     volumes:
       - wp_pkg_mysql_data:/var/lib/mysql
     networks:
-      - wp-composer-pkg
+      - wp-table-manager
     healthcheck:
       test: ["CMD", "mysql", "-u${MYSQL_USER}", "-p${MYSQL_PASSWORD}", "-e", "SHOW DATABASES;"]
       interval: 10s
@@ -48,5 +54,5 @@ volumes:
   wp_pkg_tests_data:
 
 networks:
-  wp-composer-pkg:
+  wp-table-manager:
     driver: bridge
