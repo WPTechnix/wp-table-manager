@@ -16,7 +16,7 @@ use WPTechnix\WPTableManager\Schema\IndexDefinition;
  *
  * @covers \WPTechnix\WPTableManager\Schema\IndexDefinition
  */
-class IndexDefinitionTest extends WP_UnitTestCase
+final class IndexDefinitionTest extends WP_UnitTestCase
 {
     /**
      * @test
@@ -319,7 +319,7 @@ class IndexDefinitionTest extends WP_UnitTestCase
             ->invisible();
 
         $expected = "KEY `idx_complex` (`category`, `status`) USING BTREE " .
-                   "KEY_BLOCK_SIZE=16 COMMENT 'Composite index for filtering' INVISIBLE";
+            "KEY_BLOCK_SIZE=16 COMMENT 'Composite index for filtering' INVISIBLE";
         self::assertSame($expected, $index->toSql());
     }
 
@@ -334,7 +334,7 @@ class IndexDefinitionTest extends WP_UnitTestCase
             ->visible();
 
         $expected = "UNIQUE KEY `uniq_email` (`email`) USING HASH " .
-                   "COMMENT 'Unique email constraint' VISIBLE";
+            "COMMENT 'Unique email constraint' VISIBLE";
         self::assertSame($expected, $index->toSql());
     }
 
@@ -348,7 +348,7 @@ class IndexDefinitionTest extends WP_UnitTestCase
             ->comment('Full-text search index');
 
         $expected = "FULLTEXT KEY `ft_search` (`title`, `content`) " .
-                   "WITH PARSER mecab COMMENT 'Full-text search index'";
+            "WITH PARSER mecab COMMENT 'Full-text search index'";
         self::assertSame($expected, $index->toSql());
     }
 
@@ -394,7 +394,6 @@ class IndexDefinitionTest extends WP_UnitTestCase
             ->comment('Chained')
             ->visible();
 
-        self::assertInstanceOf(IndexDefinition::class, $result);
         self::assertSame($index, $result);
     }
 

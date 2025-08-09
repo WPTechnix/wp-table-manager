@@ -9,7 +9,7 @@ use WP_UnitTestCase;
 /**
  * @covers \WPTechnix\WPTableManager\Table
  */
-class TableTest extends WP_UnitTestCase
+final class TableTest extends WP_UnitTestCase
 {
     /**
      * @test

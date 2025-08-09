@@ -18,7 +18,7 @@ use WP_UnitTestCase;
  *
  * @covers \WPTechnix\WPTableManager\Schema\ColumnDefinition
  */
-class ColumnDefinitionTest extends WP_UnitTestCase
+final class ColumnDefinitionTest extends WP_UnitTestCase
 {
     /**
      * @test
@@ -416,7 +416,6 @@ class ColumnDefinitionTest extends WP_UnitTestCase
             ->comment('User email address')
             ->after('username');
 
-        self::assertInstanceOf(ColumnDefinition::class, $result);
         self::assertSame($column, $result);
     }
 
@@ -466,7 +465,6 @@ class ColumnDefinitionTest extends WP_UnitTestCase
 
         $result = $column->setSchema($schema);
 
-        self::assertInstanceOf(ColumnDefinition::class, $result);
         self::assertSame($column, $result);
     }
 }

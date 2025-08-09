@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1754754482,
+	'lastFullAnalysisTime' => 1754754964,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.22',
@@ -9,10 +9,12 @@ return [
   array (
   ),
   'phpVersion' => 80307,
-  'projectConfig' => '{conditionalTags: {PHPStan\\Rules\\DisallowedConstructs\\DisallowedLooseComparisonRule: {phpstan.rules.rule: %strictRules.disallowedLooseComparison%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanAndRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanNotRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanOrRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInDoWhileConditionRule: {phpstan.rules.rule: %strictRules.booleansInLoopConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInElseIfConditionRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInIfConditionRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInTernaryOperatorRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInWhileConditionRule: {phpstan.rules.rule: %strictRules.booleansInLoopConditions%}, PHPStan\\Rules\\Cast\\UselessCastRule: {phpstan.rules.rule: %strictRules.uselessCast%}, PHPStan\\Rules\\Classes\\RequireParentConstructCallRule: {phpstan.rules.rule: %strictRules.requireParentConstructorCall%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedBacktickRule: {phpstan.rules.rule: %strictRules.disallowedBacktick%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedEmptyRule: {phpstan.rules.rule: %strictRules.disallowedEmpty%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedImplicitArrayCreationRule: {phpstan.rules.rule: %strictRules.disallowedImplicitArrayCreation%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedShortTernaryRule: {phpstan.rules.rule: %strictRules.disallowedShortTernary%}, PHPStan\\Rules\\ForeachLoop\\OverwriteVariablesWithForeachRule: {phpstan.rules.rule: %strictRules.overwriteVariablesWithLoop%}, PHPStan\\Rules\\ForLoop\\OverwriteVariablesWithForLoopInitRule: {phpstan.rules.rule: %strictRules.overwriteVariablesWithLoop%}, PHPStan\\Rules\\Functions\\ArrayFilterStrictRule: {phpstan.rules.rule: %strictRules.strictArrayFilter%}, PHPStan\\Rules\\Functions\\ClosureUsesThisRule: {phpstan.rules.rule: %strictRules.closureUsesThis%}, PHPStan\\Rules\\Methods\\WrongCaseOfInheritedMethodRule: {phpstan.rules.rule: %strictRules.matchingInheritedMethodNames%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPostDecrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPostIncrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPreDecrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPreIncrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryMinusRule: {phpstan.rules.rule: [%strictRules.numericOperandsInArithmeticOperators%, %featureToggles.bleedingEdge%]}, PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryPlusRule: {phpstan.rules.rule: [%strictRules.numericOperandsInArithmeticOperators%, %featureToggles.bleedingEdge%]}, PHPStan\\Rules\\Operators\\OperandsInArithmeticAdditionRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticDivisionRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticExponentiationRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticModuloRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticMultiplicationRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticSubtractionRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsRule: {phpstan.rules.rule: %strictRules.dynamicCallOnStaticMethod%}, PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsCallableRule: {phpstan.rules.rule: %strictRules.dynamicCallOnStaticMethod%}, PHPStan\\Rules\\StrictCalls\\StrictFunctionCallsRule: {phpstan.rules.rule: %strictRules.strictFunctionCalls%}, PHPStan\\Rules\\SwitchConditions\\MatchingTypeInSwitchCaseConditionRule: {phpstan.rules.rule: %strictRules.switchConditionsMatchingType%}, PHPStan\\Rules\\VariableVariables\\VariableMethodCallRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableMethodCallableRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallableRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableStaticPropertyFetchRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableVariablesRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariablePropertyFetchRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\Methods\\IllegalConstructorMethodCallRule: {phpstan.rules.rule: %strictRules.illegalConstructorMethodCall%}, PHPStan\\Rules\\Methods\\IllegalConstructorStaticCallRule: {phpstan.rules.rule: %strictRules.illegalConstructorMethodCall%}, PHPStan\\PhpDoc\\PHPUnit\\MockObjectTypeNodeResolverExtension: {phpstan.phpDoc.typeNodeResolverExtension: %phpunit.convertUnionToIntersectionType%}}, parameters: {strictRulesInstalled: true, polluteScopeWithLoopInitialAssignments: false, polluteScopeWithAlwaysIterableForeach: false, polluteScopeWithBlock: false, checkDynamicProperties: true, checkExplicitMixedMissingReturn: true, checkFunctionNameCase: true, checkInternalClassCaseSensitivity: true, reportMaybesInMethodSignatures: true, reportStaticMethodSignatures: true, reportMaybesInPropertyPhpDocTypes: true, reportWrongPhpDocTypeInVarTag: true, strictRules: {allRules: true, disallowedLooseComparison: %strictRules.allRules%, booleansInConditions: %strictRules.allRules%, booleansInLoopConditions: [%strictRules.allRules%, %featureToggles.bleedingEdge%], uselessCast: %strictRules.allRules%, requireParentConstructorCall: %strictRules.allRules%, disallowedBacktick: %strictRules.allRules%, disallowedEmpty: %strictRules.allRules%, disallowedImplicitArrayCreation: %strictRules.allRules%, disallowedShortTernary: %strictRules.allRules%, overwriteVariablesWithLoop: %strictRules.allRules%, closureUsesThis: %strictRules.allRules%, matchingInheritedMethodNames: %strictRules.allRules%, numericOperandsInArithmeticOperators: %strictRules.allRules%, strictFunctionCalls: %strictRules.allRules%, dynamicCallOnStaticMethod: %strictRules.allRules%, switchConditionsMatchingType: %strictRules.allRules%, noVariableVariables: false, strictArrayFilter: %strictRules.allRules%, illegalConstructorMethodCall: %strictRules.allRules%}, bootstrapFiles: [../../php-stubs/wordpress-stubs/wordpress-stubs.php, bootstrap.php], dynamicConstantNames: [WP_DEBUG, WP_DEBUG_LOG, WP_DEBUG_DISPLAY, EMPTY_TRASH_DAYS, WP_CLI, COOKIE_DOMAIN, SAVEQUERIES, SCRIPT_DEBUG], earlyTerminatingFunctionCalls: [wp_send_json, wp_nonce_ays], earlyTerminatingMethodCalls: {IXR_Server: [output], WP_Ajax_Response: [send], WP_CLI: [error, halt], PHPUnit\\Framework\\Assert: [fail, markTestIncomplete, markTestSkipped]}, phpunit: {convertUnionToIntersectionType: true}, additionalConstructors: [PHPUnit\\Framework\\TestCase::setUp], stubFiles: [stubs/Assert.stub, stubs/AssertionFailedError.stub, stubs/ExpectationFailedException.stub, stubs/MockBuilder.stub, stubs/MockObject.stub, stubs/Stub.stub, stubs/TestCase.stub], exceptions: {uncheckedExceptionRegexes: [\'#^PHPUnit\\\\#\', \'#^SebastianBergmann\\\\#\']}, phpVersion: {min: 80000, max: 80410}, level: 8, tmpDir: E:\\wp-table-manager\\tmp\\.phpstan, paths: [E:\\wp-table-manager\\src], scanFiles: [%rootDir%/../../php-stubs/wordpress-tests-stubs/wordpress-tests-stubs.php], treatPhpDocTypesAsCertain: false}, rules: [SzepeViktor\\PHPStan\\WordPress\\HookCallbackRule, SzepeViktor\\PHPStan\\WordPress\\HookDocsRule, SzepeViktor\\PHPStan\\WordPress\\WpConstantFetchRule], services: [{class: PHPStan\\Rules\\BooleansInConditions\\BooleanRuleHelper}, {class: PHPStan\\Rules\\Operators\\OperatorRuleHelper}, {class: PHPStan\\Rules\\VariableVariables\\VariablePropertyFetchRule, arguments: {universalObjectCratesClasses: %universalObjectCratesClasses%}}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedLooseComparisonRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanAndRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanNotRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanOrRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInDoWhileConditionRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInElseIfConditionRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInIfConditionRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInTernaryOperatorRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInWhileConditionRule}, {class: PHPStan\\Rules\\Cast\\UselessCastRule, arguments: {treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%, treatPhpDocTypesAsCertainTip: %tips.treatPhpDocTypesAsCertain%}}, {class: PHPStan\\Rules\\Classes\\RequireParentConstructCallRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedBacktickRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedEmptyRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedImplicitArrayCreationRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedShortTernaryRule}, {class: PHPStan\\Rules\\ForeachLoop\\OverwriteVariablesWithForeachRule}, {class: PHPStan\\Rules\\ForLoop\\OverwriteVariablesWithForLoopInitRule}, {class: PHPStan\\Rules\\Functions\\ArrayFilterStrictRule, arguments: {treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%, checkNullables: %checkNullables%, treatPhpDocTypesAsCertainTip: %tips.treatPhpDocTypesAsCertain%}}, {class: PHPStan\\Rules\\Functions\\ClosureUsesThisRule}, {class: PHPStan\\Rules\\Methods\\WrongCaseOfInheritedMethodRule}, {class: PHPStan\\Rules\\Methods\\IllegalConstructorMethodCallRule}, {class: PHPStan\\Rules\\Methods\\IllegalConstructorStaticCallRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPostDecrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPostIncrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPreDecrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPreIncrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryMinusRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryPlusRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticAdditionRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticDivisionRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticExponentiationRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticModuloRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticMultiplicationRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticSubtractionRule}, {class: PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsRule}, {class: PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsCallableRule}, {class: PHPStan\\Rules\\StrictCalls\\StrictFunctionCallsRule}, {class: PHPStan\\Rules\\SwitchConditions\\MatchingTypeInSwitchCaseConditionRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableMethodCallRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableMethodCallableRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallableRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableStaticPropertyFetchRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableVariablesRule}, {class: SzepeViktor\\PHPStan\\WordPress\\HookDocBlock}, {class: SzepeViktor\\PHPStan\\WordPress\\EscSqlDynamicFunctionReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\ShortcodeAttsDynamicFunctionReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\ApplyFiltersDynamicFunctionReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\WpParseUrlFunctionDynamicReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\HookDocsVisitor, tags: [phpstan.parser.richParserNodeVisitor]}, {class: SzepeViktor\\PHPStan\\WordPress\\AssertWpErrorTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.methodTypeSpecifyingExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\AssertNotWpErrorTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.methodTypeSpecifyingExtension]}, {class: PHPStan\\PhpDoc\\PHPUnit\\MockObjectTypeNodeResolverExtension}, {class: PHPStan\\Type\\PHPUnit\\Assert\\AssertFunctionTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.functionTypeSpecifyingExtension]}, {class: PHPStan\\Type\\PHPUnit\\Assert\\AssertMethodTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.methodTypeSpecifyingExtension]}, {class: PHPStan\\Type\\PHPUnit\\Assert\\AssertStaticMethodTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.staticMethodTypeSpecifyingExtension]}, {class: PHPStan\\Type\\PHPUnit\\MockBuilderDynamicReturnTypeExtension, tags: [phpstan.broker.dynamicMethodReturnTypeExtension]}, {class: PHPStan\\Rules\\PHPUnit\\CoversHelper}, {class: PHPStan\\Rules\\PHPUnit\\AnnotationHelper}, {class: PHPStan\\Rules\\PHPUnit\\DataProviderHelper, factory: {arguments: []}}, {class: PHPStan\\Rules\\PHPUnit\\DataProviderHelperFactory, arguments: {parser: @defaultAnalysisParser}}]}',
+  'projectConfig' => '{conditionalTags: {PHPStan\\Rules\\DisallowedConstructs\\DisallowedLooseComparisonRule: {phpstan.rules.rule: %strictRules.disallowedLooseComparison%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanAndRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanNotRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanOrRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInDoWhileConditionRule: {phpstan.rules.rule: %strictRules.booleansInLoopConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInElseIfConditionRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInIfConditionRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInTernaryOperatorRule: {phpstan.rules.rule: %strictRules.booleansInConditions%}, PHPStan\\Rules\\BooleansInConditions\\BooleanInWhileConditionRule: {phpstan.rules.rule: %strictRules.booleansInLoopConditions%}, PHPStan\\Rules\\Cast\\UselessCastRule: {phpstan.rules.rule: %strictRules.uselessCast%}, PHPStan\\Rules\\Classes\\RequireParentConstructCallRule: {phpstan.rules.rule: %strictRules.requireParentConstructorCall%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedBacktickRule: {phpstan.rules.rule: %strictRules.disallowedBacktick%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedEmptyRule: {phpstan.rules.rule: %strictRules.disallowedEmpty%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedImplicitArrayCreationRule: {phpstan.rules.rule: %strictRules.disallowedImplicitArrayCreation%}, PHPStan\\Rules\\DisallowedConstructs\\DisallowedShortTernaryRule: {phpstan.rules.rule: %strictRules.disallowedShortTernary%}, PHPStan\\Rules\\ForeachLoop\\OverwriteVariablesWithForeachRule: {phpstan.rules.rule: %strictRules.overwriteVariablesWithLoop%}, PHPStan\\Rules\\ForLoop\\OverwriteVariablesWithForLoopInitRule: {phpstan.rules.rule: %strictRules.overwriteVariablesWithLoop%}, PHPStan\\Rules\\Functions\\ArrayFilterStrictRule: {phpstan.rules.rule: %strictRules.strictArrayFilter%}, PHPStan\\Rules\\Functions\\ClosureUsesThisRule: {phpstan.rules.rule: %strictRules.closureUsesThis%}, PHPStan\\Rules\\Methods\\WrongCaseOfInheritedMethodRule: {phpstan.rules.rule: %strictRules.matchingInheritedMethodNames%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPostDecrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPostIncrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPreDecrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticPreIncrementRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryMinusRule: {phpstan.rules.rule: [%strictRules.numericOperandsInArithmeticOperators%, %featureToggles.bleedingEdge%]}, PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryPlusRule: {phpstan.rules.rule: [%strictRules.numericOperandsInArithmeticOperators%, %featureToggles.bleedingEdge%]}, PHPStan\\Rules\\Operators\\OperandsInArithmeticAdditionRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticDivisionRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticExponentiationRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticModuloRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticMultiplicationRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\Operators\\OperandsInArithmeticSubtractionRule: {phpstan.rules.rule: %strictRules.numericOperandsInArithmeticOperators%}, PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsRule: {phpstan.rules.rule: %strictRules.dynamicCallOnStaticMethod%}, PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsCallableRule: {phpstan.rules.rule: %strictRules.dynamicCallOnStaticMethod%}, PHPStan\\Rules\\StrictCalls\\StrictFunctionCallsRule: {phpstan.rules.rule: %strictRules.strictFunctionCalls%}, PHPStan\\Rules\\SwitchConditions\\MatchingTypeInSwitchCaseConditionRule: {phpstan.rules.rule: %strictRules.switchConditionsMatchingType%}, PHPStan\\Rules\\VariableVariables\\VariableMethodCallRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableMethodCallableRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallableRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableStaticPropertyFetchRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariableVariablesRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\VariableVariables\\VariablePropertyFetchRule: {phpstan.rules.rule: %strictRules.noVariableVariables%}, PHPStan\\Rules\\Methods\\IllegalConstructorMethodCallRule: {phpstan.rules.rule: %strictRules.illegalConstructorMethodCall%}, PHPStan\\Rules\\Methods\\IllegalConstructorStaticCallRule: {phpstan.rules.rule: %strictRules.illegalConstructorMethodCall%}, PHPStan\\PhpDoc\\PHPUnit\\MockObjectTypeNodeResolverExtension: {phpstan.phpDoc.typeNodeResolverExtension: %phpunit.convertUnionToIntersectionType%}}, parameters: {strictRulesInstalled: true, polluteScopeWithLoopInitialAssignments: false, polluteScopeWithAlwaysIterableForeach: false, polluteScopeWithBlock: false, checkDynamicProperties: true, checkExplicitMixedMissingReturn: true, checkFunctionNameCase: true, checkInternalClassCaseSensitivity: true, reportMaybesInMethodSignatures: true, reportStaticMethodSignatures: true, reportMaybesInPropertyPhpDocTypes: true, reportWrongPhpDocTypeInVarTag: true, strictRules: {allRules: true, disallowedLooseComparison: %strictRules.allRules%, booleansInConditions: %strictRules.allRules%, booleansInLoopConditions: [%strictRules.allRules%, %featureToggles.bleedingEdge%], uselessCast: %strictRules.allRules%, requireParentConstructorCall: %strictRules.allRules%, disallowedBacktick: %strictRules.allRules%, disallowedEmpty: %strictRules.allRules%, disallowedImplicitArrayCreation: %strictRules.allRules%, disallowedShortTernary: %strictRules.allRules%, overwriteVariablesWithLoop: %strictRules.allRules%, closureUsesThis: %strictRules.allRules%, matchingInheritedMethodNames: %strictRules.allRules%, numericOperandsInArithmeticOperators: %strictRules.allRules%, strictFunctionCalls: %strictRules.allRules%, dynamicCallOnStaticMethod: %strictRules.allRules%, switchConditionsMatchingType: %strictRules.allRules%, noVariableVariables: false, strictArrayFilter: %strictRules.allRules%, illegalConstructorMethodCall: %strictRules.allRules%}, bootstrapFiles: [../../php-stubs/wordpress-stubs/wordpress-stubs.php, bootstrap.php], dynamicConstantNames: [WP_DEBUG, WP_DEBUG_LOG, WP_DEBUG_DISPLAY, EMPTY_TRASH_DAYS, WP_CLI, COOKIE_DOMAIN, SAVEQUERIES, SCRIPT_DEBUG], earlyTerminatingFunctionCalls: [wp_send_json, wp_nonce_ays], earlyTerminatingMethodCalls: {IXR_Server: [output], WP_Ajax_Response: [send], WP_CLI: [error, halt], PHPUnit\\Framework\\Assert: [fail, markTestIncomplete, markTestSkipped]}, phpunit: {convertUnionToIntersectionType: true}, additionalConstructors: [PHPUnit\\Framework\\TestCase::setUp], stubFiles: [stubs/Assert.stub, stubs/AssertionFailedError.stub, stubs/ExpectationFailedException.stub, stubs/MockBuilder.stub, stubs/MockObject.stub, stubs/Stub.stub, stubs/TestCase.stub], exceptions: {uncheckedExceptionRegexes: [\'#^PHPUnit\\\\#\', \'#^SebastianBergmann\\\\#\']}, phpVersion: {min: 80000, max: 80410}, level: 8, tmpDir: E:\\wp-table-manager\\tmp\\.phpstan, paths: [E:\\wp-table-manager\\src, E:\\wp-table-manager\\tests\\Unit, E:\\wp-table-manager\\tests\\Integration], scanFiles: [%rootDir%/../../php-stubs/wordpress-tests-stubs/wordpress-tests-stubs.php], treatPhpDocTypesAsCertain: false}, rules: [SzepeViktor\\PHPStan\\WordPress\\HookCallbackRule, SzepeViktor\\PHPStan\\WordPress\\HookDocsRule, SzepeViktor\\PHPStan\\WordPress\\WpConstantFetchRule], services: [{class: PHPStan\\Rules\\BooleansInConditions\\BooleanRuleHelper}, {class: PHPStan\\Rules\\Operators\\OperatorRuleHelper}, {class: PHPStan\\Rules\\VariableVariables\\VariablePropertyFetchRule, arguments: {universalObjectCratesClasses: %universalObjectCratesClasses%}}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedLooseComparisonRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanAndRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanNotRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInBooleanOrRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInDoWhileConditionRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInElseIfConditionRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInIfConditionRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInTernaryOperatorRule}, {class: PHPStan\\Rules\\BooleansInConditions\\BooleanInWhileConditionRule}, {class: PHPStan\\Rules\\Cast\\UselessCastRule, arguments: {treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%, treatPhpDocTypesAsCertainTip: %tips.treatPhpDocTypesAsCertain%}}, {class: PHPStan\\Rules\\Classes\\RequireParentConstructCallRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedBacktickRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedEmptyRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedImplicitArrayCreationRule}, {class: PHPStan\\Rules\\DisallowedConstructs\\DisallowedShortTernaryRule}, {class: PHPStan\\Rules\\ForeachLoop\\OverwriteVariablesWithForeachRule}, {class: PHPStan\\Rules\\ForLoop\\OverwriteVariablesWithForLoopInitRule}, {class: PHPStan\\Rules\\Functions\\ArrayFilterStrictRule, arguments: {treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%, checkNullables: %checkNullables%, treatPhpDocTypesAsCertainTip: %tips.treatPhpDocTypesAsCertain%}}, {class: PHPStan\\Rules\\Functions\\ClosureUsesThisRule}, {class: PHPStan\\Rules\\Methods\\WrongCaseOfInheritedMethodRule}, {class: PHPStan\\Rules\\Methods\\IllegalConstructorMethodCallRule}, {class: PHPStan\\Rules\\Methods\\IllegalConstructorStaticCallRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPostDecrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPostIncrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPreDecrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticPreIncrementRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryMinusRule}, {class: PHPStan\\Rules\\Operators\\OperandInArithmeticUnaryPlusRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticAdditionRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticDivisionRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticExponentiationRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticModuloRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticMultiplicationRule}, {class: PHPStan\\Rules\\Operators\\OperandsInArithmeticSubtractionRule}, {class: PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsRule}, {class: PHPStan\\Rules\\StrictCalls\\DynamicCallOnStaticMethodsCallableRule}, {class: PHPStan\\Rules\\StrictCalls\\StrictFunctionCallsRule}, {class: PHPStan\\Rules\\SwitchConditions\\MatchingTypeInSwitchCaseConditionRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableMethodCallRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableMethodCallableRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableStaticMethodCallableRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableStaticPropertyFetchRule}, {class: PHPStan\\Rules\\VariableVariables\\VariableVariablesRule}, {class: SzepeViktor\\PHPStan\\WordPress\\HookDocBlock}, {class: SzepeViktor\\PHPStan\\WordPress\\EscSqlDynamicFunctionReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\ShortcodeAttsDynamicFunctionReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\ApplyFiltersDynamicFunctionReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\WpParseUrlFunctionDynamicReturnTypeExtension, tags: [phpstan.broker.dynamicFunctionReturnTypeExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\HookDocsVisitor, tags: [phpstan.parser.richParserNodeVisitor]}, {class: SzepeViktor\\PHPStan\\WordPress\\AssertWpErrorTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.methodTypeSpecifyingExtension]}, {class: SzepeViktor\\PHPStan\\WordPress\\AssertNotWpErrorTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.methodTypeSpecifyingExtension]}, {class: PHPStan\\PhpDoc\\PHPUnit\\MockObjectTypeNodeResolverExtension}, {class: PHPStan\\Type\\PHPUnit\\Assert\\AssertFunctionTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.functionTypeSpecifyingExtension]}, {class: PHPStan\\Type\\PHPUnit\\Assert\\AssertMethodTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.methodTypeSpecifyingExtension]}, {class: PHPStan\\Type\\PHPUnit\\Assert\\AssertStaticMethodTypeSpecifyingExtension, tags: [phpstan.typeSpecifier.staticMethodTypeSpecifyingExtension]}, {class: PHPStan\\Type\\PHPUnit\\MockBuilderDynamicReturnTypeExtension, tags: [phpstan.broker.dynamicMethodReturnTypeExtension]}, {class: PHPStan\\Rules\\PHPUnit\\CoversHelper}, {class: PHPStan\\Rules\\PHPUnit\\AnnotationHelper}, {class: PHPStan\\Rules\\PHPUnit\\DataProviderHelper, factory: {arguments: []}}, {class: PHPStan\\Rules\\PHPUnit\\DataProviderHelperFactory, arguments: {parser: @defaultAnalysisParser}}]}',
   'analysedPaths' => 
   array (
     0 => 'E:\\wp-table-manager\\src',
+    1 => 'E:\\wp-table-manager\\tests\\Unit',
+    2 => 'E:\\wp-table-manager\\tests\\Integration',
   ),
   'scannedFiles' => 
   array (
@@ -1095,8 +1097,52 @@ return [
   ),
 ); },
 	'locallyIgnoredErrorsCallback' => static function (): array { return array (
+  'E:\\wp-table-manager\\tests\\Integration\\TableTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Call to method PHPUnit\\Framework\\Assert::assertTrue() with true will always evaluate to true.',
+       'file' => 'E:\\wp-table-manager\\tests\\Integration\\TableTest.php',
+       'line' => 20,
+       'canBeIgnored' => true,
+       'filePath' => 'E:\\wp-table-manager\\tests\\Integration\\TableTest.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 20,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'method.alreadyNarrowedType',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Dynamic call to static method PHPUnit\\Framework\\Assert::assertTrue().',
+       'file' => 'E:\\wp-table-manager\\tests\\Integration\\TableTest.php',
+       'line' => 20,
+       'canBeIgnored' => true,
+       'filePath' => 'E:\\wp-table-manager\\tests\\Integration\\TableTest.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 20,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'staticMethod.dynamicCall',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
 ); },
 	'linesToIgnore' => array (
+  'E:\\wp-table-manager\\tests\\Integration\\TableTest.php' => 
+  array (
+    'E:\\wp-table-manager\\tests\\Integration\\TableTest.php' => 
+    array (
+      20 => NULL,
+    ),
+  ),
 ),
 	'unmatchedLineIgnores' => array (
 ),
@@ -1346,6 +1392,867 @@ return [
       ),
     ),
   ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\ColumnDefinitionTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'nullable',
+        2 => 41,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'notNull',
+        2 => 54,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 66,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 78,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 90,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 93,
+      ),
+      6 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 107,
+      ),
+      7 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 119,
+      ),
+      8 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'unsigned',
+        2 => 131,
+      ),
+      9 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'zerofill',
+        2 => 143,
+      ),
+      10 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'binary',
+        2 => 154,
+      ),
+      11 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'autoIncrement',
+        2 => 165,
+      ),
+      12 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'primary',
+        2 => 177,
+      ),
+      13 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'primary',
+        2 => 189,
+      ),
+      14 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'unique',
+        2 => 201,
+      ),
+      15 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'fulltext',
+        2 => 212,
+      ),
+      16 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'index',
+        2 => 223,
+      ),
+      17 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'comment',
+        2 => 234,
+      ),
+      18 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'comment',
+        2 => 245,
+      ),
+      19 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'onUpdateCurrentTimestamp',
+        2 => 256,
+      ),
+      20 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'charset',
+        2 => 267,
+      ),
+      21 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'collation',
+        2 => 278,
+      ),
+      22 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'collation',
+        2 => 289,
+      ),
+      23 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'first',
+        2 => 302,
+      ),
+      24 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'after',
+        2 => 313,
+      ),
+      25 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'virtualAs',
+        2 => 324,
+      ),
+      26 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'storedAs',
+        2 => 336,
+      ),
+      27 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'after',
+        2 => 348,
+      ),
+      28 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'comment',
+        2 => 364,
+      ),
+      29 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'comment',
+        2 => 383,
+      ),
+      30 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 437,
+      ),
+      31 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+        ),
+        1 => 'default',
+        2 => 450,
+      ),
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+        ),
+        1 => 'string',
+        2 => 424,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+        ),
+        1 => 'index',
+        2 => 425,
+      ),
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\ForeignKeyDefinitionTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'references',
+        2 => 41,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'references',
+        2 => 53,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'references',
+        2 => 65,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'toSql',
+        2 => 81,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 90,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 102,
+      ),
+      6 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 114,
+      ),
+      7 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 126,
+      ),
+      8 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 138,
+      ),
+      9 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 150,
+      ),
+      10 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 165,
+      ),
+      11 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 174,
+      ),
+      12 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 186,
+      ),
+      13 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 198,
+      ),
+      14 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 214,
+      ),
+      15 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 223,
+      ),
+      16 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'cascadeOnDelete',
+        2 => 243,
+      ),
+      17 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'cascadeOnUpdate',
+        2 => 255,
+      ),
+      18 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'cascade',
+        2 => 267,
+      ),
+      19 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'restrictOnDelete',
+        2 => 283,
+      ),
+      20 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'restrictOnUpdate',
+        2 => 295,
+      ),
+      21 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'restrict',
+        2 => 307,
+      ),
+      22 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'nullOnDelete',
+        2 => 323,
+      ),
+      23 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'nullOnUpdate',
+        2 => 335,
+      ),
+      24 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'noActionOnDelete',
+        2 => 347,
+      ),
+      25 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'noActionOnUpdate',
+        2 => 359,
+      ),
+      26 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'noAction',
+        2 => 371,
+      ),
+      27 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 387,
+      ),
+      28 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'references',
+        2 => 416,
+      ),
+      29 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'restrictOnDelete',
+        2 => 428,
+      ),
+      30 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'references',
+        2 => 443,
+      ),
+      31 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onDelete',
+        2 => 458,
+      ),
+      32 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'onUpdate',
+        2 => 461,
+      ),
+      33 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+        ),
+        1 => 'references',
+        2 => 474,
+      ),
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\IndexDefinitionTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'using',
+        2 => 102,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'using',
+        2 => 113,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'using',
+        2 => 124,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'using',
+        2 => 135,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'keyBlockSize',
+        2 => 146,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'keyBlockSize',
+        2 => 157,
+      ),
+      6 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'keyBlockSize',
+        2 => 158,
+      ),
+      7 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'comment',
+        2 => 169,
+      ),
+      8 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'comment',
+        2 => 181,
+      ),
+      9 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'visible',
+        2 => 192,
+      ),
+      10 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'invisible',
+        2 => 203,
+      ),
+      11 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'visible',
+        2 => 214,
+      ),
+      12 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'visible',
+        2 => 217,
+      ),
+      13 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'withParser',
+        2 => 229,
+      ),
+      14 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'withParser',
+        2 => 241,
+      ),
+      15 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'length',
+        2 => 252,
+      ),
+      16 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'lengths',
+        2 => 264,
+      ),
+      17 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'length',
+        2 => 280,
+      ),
+      18 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'length',
+        2 => 291,
+      ),
+      19 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'length',
+        2 => 292,
+      ),
+      20 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'length',
+        2 => 303,
+      ),
+      21 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'invisible',
+        2 => 316,
+      ),
+      22 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'visible',
+        2 => 332,
+      ),
+      23 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'comment',
+        2 => 347,
+      ),
+      24 => 
+      array (
+        0 => 
+        array (
+          0 => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+        1 => 'visible',
+        2 => 361,
+      ),
+    ),
+  ),
 ); },
 	'dependencies' => array (
   'E:\\wp-table-manager\\src\\Exceptions\\SchemaException.php' => 
@@ -1356,6 +2263,8 @@ return [
       0 => 'E:\\wp-table-manager\\src\\Schema\\CreateTableSchema.php',
       1 => 'E:\\wp-table-manager\\src\\Schema\\ForeignKeyDefinition.php',
       2 => 'E:\\wp-table-manager\\src\\Table.php',
+      3 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php',
+      4 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\ForeignKeyDefinitionTest.php',
     ),
   ),
   'E:\\wp-table-manager\\src\\Interfaces\\TableInterface.php' => 
@@ -1373,6 +2282,8 @@ return [
     array (
       0 => 'E:\\wp-table-manager\\src\\Schema\\CreateTableSchema.php',
       1 => 'E:\\wp-table-manager\\src\\Table.php',
+      2 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\ColumnDefinitionTest.php',
+      3 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php',
     ),
   ),
   'E:\\wp-table-manager\\src\\Schema\\CreateTableSchema.php' => 
@@ -1382,6 +2293,8 @@ return [
     array (
       0 => 'E:\\wp-table-manager\\src\\Schema\\ColumnDefinition.php',
       1 => 'E:\\wp-table-manager\\src\\Table.php',
+      2 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\ColumnDefinitionTest.php',
+      3 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php',
     ),
   ),
   'E:\\wp-table-manager\\src\\Schema\\ForeignKeyDefinition.php' => 
@@ -1390,6 +2303,8 @@ return [
     'dependentFiles' => 
     array (
       0 => 'E:\\wp-table-manager\\src\\Schema\\CreateTableSchema.php',
+      1 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php',
+      2 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\ForeignKeyDefinitionTest.php',
     ),
   ),
   'E:\\wp-table-manager\\src\\Schema\\IndexDefinition.php' => 
@@ -1398,11 +2313,47 @@ return [
     'dependentFiles' => 
     array (
       0 => 'E:\\wp-table-manager\\src\\Schema\\CreateTableSchema.php',
+      1 => 'E:\\wp-table-manager\\tests\\Unit\\Schema\\IndexDefinitionTest.php',
     ),
   ),
   'E:\\wp-table-manager\\src\\Table.php' => 
   array (
     'fileHash' => 'bcdddb44035eb971e2c16283897eebd308deb1ad',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Integration\\TableTest.php' => 
+  array (
+    'fileHash' => '21da3814053a340575c735957d26c20cefd4e71c',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\ColumnDefinitionTest.php' => 
+  array (
+    'fileHash' => 'aba15f0d2923155e486cf4cfd9ebc8c2f8a3feb3',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php' => 
+  array (
+    'fileHash' => '8a481e59ca027c24bfa94f20999858e49b7f7024',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\ForeignKeyDefinitionTest.php' => 
+  array (
+    'fileHash' => 'a7579963026857c23858128dd46675fc028261a7',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\IndexDefinitionTest.php' => 
+  array (
+    'fileHash' => '5eedf1020884c4cfcd38ec486dacdd8d796dd0ca',
     'dependentFiles' => 
     array (
     ),
@@ -12437,6 +13388,3948 @@ return [
               array (
               ),
             )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'E:\\wp-table-manager\\tests\\Integration\\TableTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'WPTechnix\\WPTableManager\\Tests\\Integration\\TableTest',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @covers \\WPTechnix\\WPTableManager\\Table
+ */',
+         'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Integration',
+         'uses' => 
+        array (
+          'wp_unittestcase' => 'WP_UnitTestCase',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'WP_UnitTestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSample',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Integration',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\ColumnDefinitionTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema\\ColumnDefinitionTest',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * Class ColumnDefinitionTest
+ *
+ * @covers \\WPTechnix\\WPTableManager\\Schema\\ColumnDefinition
+ */',
+         'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+         'uses' => 
+        array (
+          'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+          'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+          'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+          'wp_unittestcase' => 'WP_UnitTestCase',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'WP_UnitTestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesBasicColumnDefinition',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesNullableColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesNotNullColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsDefaultValueForString',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsDefaultValueForNumber',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsDefaultValueForBoolean',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsDefaultValueForNull',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsRawDefaultValue',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesUnsignedColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesZerofillColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesBinaryColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesAutoIncrementColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesPrimaryKeyColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itDoesNotAddPrimaryKeyWhenPartOfComposite',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesUniqueIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesFulltextIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesRegularIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itAddsComment',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itEscapesCommentQuotes',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesOnUpdateCurrentTimestamp',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsCharset',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        21 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsCollation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        22 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsCharsetAndCollation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        23 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsPositionFirst',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        24 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsPositionAfter',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        25 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesVirtualGeneratedColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        26 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesStoredGeneratedColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        27 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesComplexColumnDefinition',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        28 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesCompleteTimestampColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        29 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itMaintainsCorrectOrderOfModifiers',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        30 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSupportsMethodChaining',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        31 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesSpecialDefaultValues',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        32 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itEscapesStringDefaultValues',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        33 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesSchemaReference',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'columndefinition' => 'WPTechnix\\WPTableManager\\Schema\\ColumnDefinition',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\CreateTableSchemaTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema\\CreateTableSchemaTest',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * Class CreateTableSchemaTest
+ *
+ * @covers \\WPTechnix\\WPTableManager\\Schema\\CreateTableSchema
+ */',
+         'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+         'uses' => 
+        array (
+          'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+          'wpdb' => 'wpdb',
+          'wp_unittestcase' => 'WP_UnitTestCase',
+          'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+          'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'WP_UnitTestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setUp',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Set up the test environment before each test.
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'mockobject' => 'PHPUnit\\Framework\\MockObject\\MockObject',
+              'wpdb' => 'wpdb',
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+              'createtableschema' => 'WPTechnix\\WPTableManager\\Schema\\CreateTableSchema',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testBasicTableCreation',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testTableClauses',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testAllNumericColumnTypes',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testAllStringAndTextColumnTypes',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testAllDateTimeColumnTypes',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testAllBinaryAndBlobTypes',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testAllSpecialColumnTypes',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testTimestampsAndSoftDeletesHelpers',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testTimestampsAndSoftDeletesWithTimestampType',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testMorphsHelpers',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCompositePrimaryKey',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testExplicitSingleColumnPrimaryKey',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testIndexDefinitions',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testColumnLevelIndexCreation',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testForeignKeyConstraints',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testTableOptions',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testIndexNameGenerationLogic',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testThrowsExceptionIfNoColumnsDefined',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testThrowsExceptionForInvalidRowFormat',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testThrowsExceptionForIncompleteForeignKey',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\ForeignKeyDefinitionTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema\\ForeignKeyDefinitionTest',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * Class ForeignKeyDefinitionTest
+ *
+ * @covers \\WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition
+ */',
+         'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+         'uses' => 
+        array (
+          'wp_unittestcase' => 'WP_UnitTestCase',
+          'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+          'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'WP_UnitTestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesForeignKeyDefinition',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsReferencesWithDefaultColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsReferencesWithCustomColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesBasicForeignKeySql',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itThrowsExceptionWhenReferencesNotSet',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnDeleteCascade',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnDeleteSetNull',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnDeleteRestrict',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnDeleteNoAction',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnDeleteSetDefault',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itNormalizesOnDeleteCase',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itThrowsExceptionForInvalidOnDelete',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnUpdateCascade',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnUpdateSetNull',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsOnUpdateRestrict',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itThrowsExceptionForInvalidOnUpdate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsBothOnDeleteAndOnUpdate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesCascadeOnDeleteShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesCascadeOnUpdateShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesCascadeShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesRestrictOnDeleteShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        21 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesRestrictOnUpdateShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        22 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesRestrictShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        23 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesNullOnDeleteShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        24 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesNullOnUpdateShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        25 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesNoActionOnDeleteShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        26 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesNoActionOnUpdateShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        27 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itUsesNoActionShortcut',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        28 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesComplexForeignKeySql',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        29 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSupportsMethodChaining',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        30 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesMinimalConfiguration',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        31 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itOverwritesPreviousActions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        32 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesSpecialCharactersInNames',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        33 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itValidatesAllReferentialActions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        34 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesSqlWithoutActionsWhenNotSet',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'foreignkeydefinition' => 'WPTechnix\\WPTableManager\\Schema\\ForeignKeyDefinition',
+              'schemaexception' => 'WPTechnix\\WPTableManager\\Exceptions\\SchemaException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'E:\\wp-table-manager\\tests\\Unit\\Schema\\IndexDefinitionTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema\\IndexDefinitionTest',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * Class IndexDefinitionTest
+ *
+ * @covers \\WPTechnix\\WPTableManager\\Schema\\IndexDefinition
+ */',
+         'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+         'uses' => 
+        array (
+          'wp_unittestcase' => 'WP_UnitTestCase',
+          'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'WP_UnitTestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesBasicIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesMultiColumnIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesUniqueIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesFulltextIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itCreatesSpatialIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itNormalizesIndexType',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsIndexAlgorithmBtree',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsIndexAlgorithmHash',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itIgnoresInvalidAlgorithm',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itNormalizesAlgorithmCase',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsKeyBlockSize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itIgnoresInvalidKeyBlockSize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsIndexComment',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itEscapesCommentQuotes',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsIndexVisibility',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsIndexInvisibility',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsVisibilityWithParameter',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsFulltextParser',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itIgnoresParserForNonFulltextIndex',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsPartialIndexLength',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSetsMultiplePartialLengths',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        21 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itIgnoresLengthForNonExistentColumn',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        22 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itIgnoresInvalidLength',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        23 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesMixedPartialLengths',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        24 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesComplexIndexDefinition',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        25 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesUniqueIndexWithOptions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        26 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itGeneratesFulltextIndexWithOptions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        27 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itMaintainsCorrectOrderOfOptions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        28 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itSupportsMethodChaining',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        29 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesEmptyOptionsCorrectly',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        30 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'itHandlesSpecialCharactersInColumnNames',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @test
+     */',
+             'namespace' => 'WPTechnix\\WPTableManager\\Tests\\Unit\\Schema',
+             'uses' => 
+            array (
+              'wp_unittestcase' => 'WP_UnitTestCase',
+              'indexdefinition' => 'WPTechnix\\WPTableManager\\Schema\\IndexDefinition',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
           ),
            'attributes' => 
           array (

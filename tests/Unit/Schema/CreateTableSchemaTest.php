@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace WPTechnix\WPTableManager\Tests\Unit\Schema;
 
+use PHPUnit\Framework\MockObject\MockObject;
 use wpdb;
 use WP_UnitTestCase;
 use WPTechnix\WPTableManager\Exceptions\SchemaException;
@@ -19,10 +20,20 @@ use WPTechnix\WPTableManager\Schema\CreateTableSchema;
  *
  * @covers \WPTechnix\WPTableManager\Schema\CreateTableSchema
  */
-class CreateTableSchemaTest extends WP_UnitTestCase
+final class CreateTableSchemaTest extends WP_UnitTestCase
 {
+    /**
+     * wpdb mock object
+     *
+     * @var MockObject&wpdb
+     */
     private $wpdb;
 
+    /**
+     * Create Table Schema instance
+     *
+     * @var CreateTableSchema
+     */
     private CreateTableSchema $schema;
 
     /**
@@ -41,8 +52,8 @@ class CreateTableSchemaTest extends WP_UnitTestCase
     private static function assertSqlEquals(string $expected, string $actual): void
     {
         $normalize = function ($sql) {
-            $sql = preg_replace('/\s+/', ' ', $sql); // Standardize whitespace
-            $sql = preg_replace('/\s*([,()])\s*/', '$1', $sql); // Remove space around commas/parentheses
+            $sql = (string) preg_replace('/\s+/', ' ', $sql); // Standardize whitespace
+            $sql = (string) preg_replace('/\s*([,()])\s*/', '$1', $sql); // Remove space around commas/parentheses
             return trim(strtoupper($sql), ' ;'); // Trim and convert to uppercase
         };
 
@@ -271,7 +282,7 @@ class CreateTableSchemaTest extends WP_UnitTestCase
             ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         ";
 
-        $this->assertSqlEquals($expectedSql, $this->schema->toSql());
+        static::assertSqlEquals($expectedSql, $this->schema->toSql());
     }
 
     public function testCompositePrimaryKey(): void
@@ -362,13 +373,13 @@ class CreateTableSchemaTest extends WP_UnitTestCase
         $this->schema->bigInteger('post_id')->unsigned();
 
         $this->schema->foreign('user_id')
-                     ->references('users', 'id')
-                     ->cascadeOnDelete();
+            ->references('users', 'id')
+            ->cascadeOnDelete();
 
         $this->schema->foreign('post_id', 'fk_test_table_post_id')
-                     ->references('posts') // 'id' column is default
-                     ->onUpdate('cascade')
-                     ->onDelete('restrict');
+            ->references('posts') // 'id' column is default
+            ->onUpdate('cascade')
+            ->onDelete('restrict');
 
         // phpcs:disable
         $expectedSql = "
@@ -389,11 +400,11 @@ class CreateTableSchemaTest extends WP_UnitTestCase
     {
         $this->schema->id();
         $this->schema->engine('MyISAM')
-                     ->charset('latin1')
-                     ->collation('latin1_swedish_ci')
-                     ->comment('A legacy table')
-                     ->autoIncrement(500)
-                     ->rowFormat('DYNAMIC');
+            ->charset('latin1')
+            ->collation('latin1_swedish_ci')
+            ->comment('A legacy table')
+            ->autoIncrement(500)
+            ->rowFormat('DYNAMIC');
 
         // phpcs:disable
         $expectedSql = "
