@@ -1,0 +1,52 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        USER_ID: ${UID:-1000}
+        GROUP_ID: ${GID:-1000}
+        PHP_VERSION: ${PHP_VERSION:-8.4}
+    container_name: ${COMPOSE_PROJECT_NAME:-wp-composer-pkg}-php
+    user: "${UID:-1000}:${GID:-1000}"
+    env_file:
+      - .env
+    volumes:
+      - ../:/app
+      - wp_pkg_tests_data:/tmp/wordpress-tests-suite
+      - ./php.ini:/usr/local/etc/php/conf.d/custom.ini
+    tty: true
+    stdin_open: true
+    networks:
+      - wp-composer-pkg
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: ${COMPOSE_PROJECT_NAME:-wp-composer-pkg}-db
+    restart: unless-stopped
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${WORDPRESS_TESTS_DATABASE:-wordpress_tests}
+      MYSQL_USER: ${MYSQL_USER:-wordpress}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+    volumes:
+      - wp_pkg_mysql_data:/var/lib/mysql
+    networks:
+      - wp-composer-pkg
+    healthcheck:
+      test: ["CMD", "mysql", "-u${MYSQL_USER}", "-p${MYSQL_PASSWORD}", "-e", "SHOW DATABASES;"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  wp_pkg_mysql_data:
+  wp_pkg_tests_data:
+
+networks:
+  wp-composer-pkg:
+    driver: bridge

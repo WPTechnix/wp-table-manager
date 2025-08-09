@@ -1,0 +1,66 @@
+{
+    "name": "wptechnix/wp-composer-package-template",
+    "version": "0.1.0",
+    "description": "A simple description.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "WPTechnix",
+            "email": "developers@wptechnix.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0"
+     },
+    "require-dev": {
+        "php-stubs/wordpress-tests-stubs": "^6.8",
+        "phpcompatibility/php-compatibility": "*",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "^3",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "yoast/phpunit-polyfills": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WPTechnix\\WPComposerPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WPTechnix\\WPComposerPackage\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "mkdir-reports": "mkdir reports || true",
+        "fix:phpcbf": "vendor/bin/phpcbf || true",
+        "lint:phpcs": "vendor/bin/phpcs --report=full",
+        "lint:phpstan": "vendor/bin/phpstan analyse --memory-limit=2G --error-format=table",
+        "lint": [
+            "@fix:phpcbf",
+            "@lint:phpcs",
+            "@lint:phpstan"
+        ],
+		"setup:phpunit": "bash bin/install-wp-tests wordpress_tests wordpress wordpress db latest true",
+        "test": [
+            "@mkdir-reports",
+            "vendor/bin/phpunit --testdox --colors"
+        ],
+        "test:coverage": [
+            "@mkdir-reports",
+            "rm -rf reports/coverage",
+            "XDEBUG_MODE=coverage vendor/bin/phpunit --testdox --colors --coverage-html=reports/coverage"
+        ],
+        "test:unit": "vendor/bin/phpunit --testdox --colors --testsuite unit",
+        "test:integration": "vendor/bin/phpunit --testdox --colors --testsuite integration"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

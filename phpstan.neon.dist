@@ -1,0 +1,27 @@
+parameters:
+    phpVersion:
+        min: 80000
+        max: 80410
+
+    level: 8
+    tmpDir: /tmp/.phpstan
+    paths:
+        - src/
+
+    scanFiles:
+        - %rootDir%/../../php-stubs/wordpress-tests-stubs/wordpress-tests-stubs.php
+
+    # Strict rules configuration
+    strictRules:
+        noVariableVariables: false
+
+    ignoreErrors:
+        - identifier: empty.notAllowed
+        - message: '#Parameter \#1 \$query of method wpdb::prepare\(\) expects literal-string, non-falsy-string#'
+
+    treatPhpDocTypesAsCertain: false
+
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
