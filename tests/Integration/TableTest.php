@@ -7,15 +7,11 @@ namespace WPTechnix\WPTableManager\Tests\Integration;
 use WP_UnitTestCase;
 
 /**
- * Test Integration
- *
- * @coversNothing
+ * @covers \WPTechnix\WPTableManager\Table
  */
-class IntegrationTest extends WP_UnitTestCase
+class TableTest extends WP_UnitTestCase
 {
     /**
-     * Test Sample
-     *
      * @test
      */
     public function testSample(): void

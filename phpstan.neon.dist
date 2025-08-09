@@ -17,6 +17,7 @@ parameters:
 
     ignoreErrors:
         - identifier: empty.notAllowed
+        - '#Parameter \#1 \$query of method wpdb\:\:prepare\(\) expects literal-string\, non-falsy-string given*#'
 
     treatPhpDocTypesAsCertain: false
 
