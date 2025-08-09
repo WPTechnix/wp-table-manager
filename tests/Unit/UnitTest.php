@@ -7,7 +7,7 @@ namespace WPTechnix\WPTableManager\Tests\Unit;
 use WP_UnitTestCase;
 
 /**
- * Test Sample
+ * Test Unit
  *
  * @coversNothing
  */

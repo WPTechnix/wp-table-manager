@@ -15,6 +15,9 @@ parameters:
     strictRules:
         noVariableVariables: false
 
+    ignoreErrors:
+        - identifier: empty.notAllowed
+
     treatPhpDocTypesAsCertain: false
 
 includes:
