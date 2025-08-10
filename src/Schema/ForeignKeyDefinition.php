@@ -25,30 +25,30 @@ class ForeignKeyDefinition
      * @var string|null
      */
     protected ?string $referencesTable = null;
-/**
+    /**
      * Referenced column.
      *
      * @var string|null
      */
     protected ?string $referencesColumn = null;
-/**
+    /**
      * ON DELETE action.
      *
      * @var string|null
      */
     protected ?string $onDelete = null;
-/**
+    /**
      * ON UPDATE action.
      *
      * @var string|null
      */
     protected ?string $onUpdate = null;
-/**
+    /**
      * Valid referential actions.
      *
      * @var array<int, string>
      */
-    protected const VALID_ACTIONS = [ 'RESTRICT', 'CASCADE', 'SET NULL', 'NO ACTION', 'SET DEFAULT' ];
+    protected const VALID_ACTIONS = ['RESTRICT', 'CASCADE', 'SET NULL', 'NO ACTION', 'SET DEFAULT'];
 
     /**
      * Constructor.
@@ -56,8 +56,10 @@ class ForeignKeyDefinition
      * @param string $name    Constraint name.
      * @param string $column  Local column.
      */
-    public function __construct(protected string $name, protected string $column)
-    {
+    public function __construct(
+        protected string $name,
+        protected string $column
+    ) {
     }
 
     /**
@@ -70,7 +72,7 @@ class ForeignKeyDefinition
      */
     public function references(string $table, string $column = 'id'): self
     {
-        $this->referencesTable  = $table;
+        $this->referencesTable = $table;
         $this->referencesColumn = $column;
         return $this;
     }
@@ -87,7 +89,7 @@ class ForeignKeyDefinition
     public function onDelete(string $action): self
     {
         $action = strtoupper($action);
-        if (! in_array($action, self::VALID_ACTIONS, true)) {
+        if (!in_array($action, self::VALID_ACTIONS, true)) {
             throw new SchemaException(
                 "Invalid ON DELETE action: {$action}. Valid actions are: " . implode(', ', self::VALID_ACTIONS)
             );
@@ -108,7 +110,7 @@ class ForeignKeyDefinition
     public function onUpdate(string $action): self
     {
         $action = strtoupper($action);
-        if (! in_array($action, self::VALID_ACTIONS, true)) {
+        if (!in_array($action, self::VALID_ACTIONS, true)) {
             throw new SchemaException(
                 "Invalid ON UPDATE action: {$action}. Valid actions are: " . implode(', ', self::VALID_ACTIONS)
             );

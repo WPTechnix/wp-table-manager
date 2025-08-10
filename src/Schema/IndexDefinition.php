@@ -16,54 +16,36 @@ namespace WPTechnix\WPTableManager\Schema;
 class IndexDefinition
 {
     /**
-     * Index name.
-     *
-     * @var string
-     */
-    protected string $name;
-/**
-     * Columns in the index.
-     *
-     * @var array<int, string>
-     */
-    protected array $columns;
-/**
-     * Index type (INDEX, UNIQUE, FULLTEXT, SPATIAL).
-     *
-     * @var string
-     */
-    protected string $type;
-/**
      * Index algorithm (BTREE, HASH).
      *
      * @var string|null
      */
     protected ?string $using = null;
-/**
+    /**
      * Key block size.
      *
      * @var int|null
      */
     protected ?int $keyBlockSize = null;
-/**
+    /**
      * Index comment.
      *
      * @var string|null
      */
     protected ?string $comment = null;
-/**
+    /**
      * Index visibility (MySQL 8.0+).
      *
      * @var string|null
      */
     protected ?string $visibility = null;
-/**
+    /**
      * Parser name for fulltext indexes.
      *
      * @var string|null
      */
     protected ?string $parser = null;
-/**
+    /**
      * Column lengths for partial indexes.
      *
      * @var array<string, int>
@@ -77,11 +59,12 @@ class IndexDefinition
      * @param array<int, string>   $columns Columns.
      * @param string               $type    Index type.
      */
-    public function __construct(string $name, array $columns, string $type = 'INDEX')
-    {
-        $this->name    = $name;
-        $this->columns = $columns;
-        $this->type    = strtoupper($type);
+    public function __construct(
+        protected string $name,
+        protected array $columns,
+        protected string $type = 'INDEX'
+    ) {
+        $this->type = strtoupper($type);
     }
 
     /**
@@ -93,8 +76,8 @@ class IndexDefinition
      */
     public function using(string $algorithm): self
     {
-        $algorithm   = strtoupper($algorithm);
-        $validAlgos = [ 'BTREE', 'HASH' ];
+        $algorithm = strtoupper($algorithm);
+        $validAlgos = ['BTREE', 'HASH'];
         if (in_array($algorithm, $validAlgos, true)) {
             $this->using = $algorithm;
         }
@@ -179,7 +162,7 @@ class IndexDefinition
     public function length(string $column, int $length): self
     {
         if (in_array($column, $this->columns, true) && $length > 0) {
-            $this->columnLengths[ $column ] = $length;
+            $this->columnLengths[$column] = $length;
         }
         return $this;
     }
@@ -210,20 +193,22 @@ class IndexDefinition
         $columnDefinitions = [];
         foreach ($this->columns as $column) {
             $columnDef = '`' . $column . '`';
-            if (isset($this->columnLengths[ $column ])) {
-                $columnDef .= '(' . $this->columnLengths[ $column ] . ')';
+            if (isset($this->columnLengths[$column])) {
+                $columnDef .= '(' . $this->columnLengths[$column] . ')';
             }
             $columnDefinitions[] = $columnDef;
         }
         $columnList = implode(', ', $columnDefinitions);
-// Build the base index definition.
+
+        // Build the base index definition.
         $sql = match ($this->type) {
             'UNIQUE' => sprintf('UNIQUE KEY `%s` (%s)', $this->name, $columnList),
             'FULLTEXT' => sprintf('FULLTEXT KEY `%s` (%s)', $this->name, $columnList),
             'SPATIAL' => sprintf('SPATIAL KEY `%s` (%s)', $this->name, $columnList),
             default => sprintf('KEY `%s` (%s)', $this->name, $columnList),
         };
-// Add index options.
+
+        // Add index options.
         $options = [];
         if ($this->using !== null) {
             $options[] = 'USING ' . $this->using;
@@ -245,7 +230,7 @@ class IndexDefinition
             $options[] = $this->visibility;
         }
 
-        if (! empty($options)) {
+        if (!empty($options)) {
             $sql .= ' ' . implode(' ', $options);
         }
 

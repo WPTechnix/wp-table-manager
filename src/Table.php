@@ -125,7 +125,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
     /**
      * A local cache for the array of table versions stored in the database.
      *
-     * @var array<string|int, array<string, int>>|array{}
+     * @var  array<string, int>
      */
     protected ?array $tableVersions = [];
 
@@ -208,7 +208,9 @@ abstract class Table implements TableInterface, LoggerAwareInterface
             );
         }
 
-        $this->tableVersionsOptionName = $this->cleanIdentifier($this->pluginPrefix) . '_table_versions';
+        $pluginPrefix = Util::cleanSqlIdentifier($this->pluginPrefix);
+
+        $this->tableVersionsOptionName = $this->pluginPrefix . '_table_versions';
     }
 
     /*
@@ -230,8 +232,8 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final public function getInstalledVersion(): int
     {
-        $versions = $this->getTableVersions();
-        return $versions[static::class] ?? self::BASE_VERSION;
+        $this->getTableVersions();
+        return $this->tableVersions[static::class] ?? self::BASE_VERSION;
     }
 
     /**
@@ -245,7 +247,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
             $baseName = $prefix . $baseName;
         }
 
-        return $this->cleanIdentifier($baseName);
+        return Util::cleanSqlIdentifier($baseName);
     }
 
     /**
@@ -253,7 +255,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final public function getTableAlias(): string
     {
-        return $this->cleanIdentifier($this->tableAlias ?? '');
+        return Util::cleanSqlIdentifier($this->tableAlias ?? '');
     }
 
     /**
@@ -473,16 +475,17 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function updateCurrentDbVersion(int $version): void
     {
-        $key = $this->isMultisiteShared() ? 'network' : $this->getCurrentSiteId();
         // Ensure current versions are loaded
         $this->getTableVersions();
+
         // Update version
-        $this->tableVersions[$key][static::class] = $version;
+        $this->tableVersions[static::class] = $version;
+
         // Persist updated versions
         if ($this->isMultisiteShared()) {
-            update_site_option($this->tableVersionsOptionName, $this->tableVersions[$key]);
+            update_site_option($this->tableVersionsOptionName, $this->tableVersions);
         } else {
-            update_option($this->tableVersionsOptionName, $this->tableVersions[$key], false);
+            update_option($this->tableVersionsOptionName, $this->tableVersions, false);
         }
 
         // Log version update
@@ -501,15 +504,14 @@ abstract class Table implements TableInterface, LoggerAwareInterface
     final protected function getTableVersions(): array
     {
         $isShared = $this->isMultisiteShared();
-        $key = $isShared ? 'network' : $this->getCurrentSiteId();
-        if (!isset($this->tableVersions[$key])) {
+        if (!isset($this->tableVersions)) {
             $optionValue = $isShared
                 ? get_site_option($this->tableVersionsOptionName, [])
                 : get_option($this->tableVersionsOptionName, []);
-            $this->tableVersions[$key] = is_array($optionValue) ? $optionValue : [];
+            $this->tableVersions = is_array($optionValue) ? $optionValue : [];
         }
 
-        return $this->tableVersions[$key];
+        return $this->tableVersions;
     }
 
     /*
@@ -526,7 +528,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function columnExists(string $columnName): bool
     {
-        $columnName = $this->cleanIdentifier($columnName);
+        $columnName = Util::cleanSqlIdentifier($columnName);
         if ('' === $columnName) {
             return false;
         }
@@ -554,7 +556,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function addColumn(string $columnName, string $columnDefinition, ?string $afterColumn = null): bool
     {
-        $columnName = $this->cleanIdentifier($columnName);
+        $columnName = Util::cleanSqlIdentifier($columnName);
         $tableName = $this->getTableName();
         if ($this->columnExists($columnName)) {
             $this->logger?->notice('Skipped adding column because it already exists.', [
@@ -568,7 +570,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
 
         $sql = "ALTER TABLE `$tableName` ADD COLUMN `$columnName` $columnDefinition";
         if (!empty($afterColumn)) {
-            $sql .= ' AFTER `' . $this->cleanIdentifier($afterColumn) . '`';
+            $sql .= ' AFTER `' . Util::cleanSqlIdentifier($afterColumn) . '`';
         }
 
         $hasAdded = false !== $this->wpdb->query($sql);
@@ -587,7 +589,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function dropColumn(string $columnName): bool
     {
-        $columnName = $this->cleanIdentifier($columnName);
+        $columnName = Util::cleanSqlIdentifier($columnName);
         $tableName = $this->getTableName();
         if (!$this->columnExists($columnName)) {
             $this->logger?->notice('Skipped dropping column because it does not exist.', [
@@ -615,7 +617,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function modifyColumn(string $columnName, string $newColumnDefinition): bool
     {
-        $columnName = $this->cleanIdentifier($columnName);
+        $columnName = Util::cleanSqlIdentifier($columnName);
         $tableName = $this->getTableName();
         if (!$this->columnExists($columnName)) {
             $this->logger?->warning('Failed to modify column because it does not exist.', [
@@ -676,8 +678,8 @@ abstract class Table implements TableInterface, LoggerAwareInterface
             $this->isMysqlAtLeast('8.0.3') ||
             $this->isMariaDbAtLeast('10.5.2')
         ) {
-            $oldColumnName = $this->cleanIdentifier($oldColumnName);
-            $newColumnName = $this->cleanIdentifier($newColumnName);
+            $oldColumnName = Util::cleanSqlIdentifier($oldColumnName);
+            $newColumnName = Util::cleanSqlIdentifier($newColumnName);
             $query = "ALTER TABLE `$tableName` RENAME COLUMN `$oldColumnName` TO `$newColumnName`";
             $hasRenamed = false !== $this->wpdb->query($query);
             if ($hasRenamed) {
@@ -716,8 +718,8 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         string $newColumnName,
         string $newColumnDefinition
     ): bool {
-        $oldColumnName = $this->cleanIdentifier($oldColumnName);
-        $newColumnName = $this->cleanIdentifier($newColumnName);
+        $oldColumnName = Util::cleanSqlIdentifier($oldColumnName);
+        $newColumnName = Util::cleanSqlIdentifier($newColumnName);
         if (!$this->columnExists($oldColumnName)) {
             return false;
         }
@@ -785,7 +787,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
     {
 
         $tableName = $this->getTableName();
-        $indexName = $this->cleanIdentifier($indexName);
+        $indexName = Util::cleanSqlIdentifier($indexName);
 
         if (isset($this->indexCached[$indexName])) {
             return !empty($this->indexCached[$indexName]);
@@ -820,7 +822,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         }
 
         // 2. Now, reliably get the details from the cache.
-        $indexName = $this->cleanIdentifier($indexName);
+        $indexName = Util::cleanSqlIdentifier($indexName);
         $indexInfo = $this->indexCached[$indexName];
 
         if (empty($indexInfo)) {
@@ -858,7 +860,12 @@ abstract class Table implements TableInterface, LoggerAwareInterface
                 self::INDEX_TYPE_SPATIAL => 'sp',
                 default => 'idx',
             };
-            $indexName = $this->generateIndexName($columns, $indexTypePrefix);
+
+            $indexName = Util::generateSqlIndexName(
+                $this->getTableName(false),
+                $columns,
+                $indexTypePrefix
+            );
         }
 
         if ($this->indexExists($indexName)) {
@@ -890,7 +897,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         }
 
         $columns = is_array($columns) ? $columns : [$columns];
-        $columnList = array_map(fn($col) => '`' . $this->cleanIdentifier($col) . '`', $columns);
+        $columnList = array_map(fn($col) => '`' . Util::cleanSqlIdentifier($col) . '`', $columns);
         if (empty($columnList)) {
             return false;
         }
@@ -924,7 +931,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function dropIndex(string $indexName): bool
     {
-        $indexName = $this->cleanIdentifier($indexName);
+        $indexName = Util::cleanSqlIdentifier($indexName);
         if ('PRIMARY' === strtoupper($indexName)) {
             return $this->dropPrimaryKey();
         }
@@ -977,7 +984,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         }
 
         $columns = is_array($columns) ? $columns : [$columns];
-        $columnList = array_map(fn($col) => '`' . $this->cleanIdentifier($col) . '`', $columns);
+        $columnList = array_map(fn($col) => '`' . Util::cleanSqlIdentifier($col) . '`', $columns);
         if (empty($columnList)) {
             return false;
         }
@@ -1058,7 +1065,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function foreignKeyExists(string $fkName): bool
     {
-        $fkName = $this->cleanIdentifier($fkName);
+        $fkName = Util::cleanSqlIdentifier($fkName);
         if ('' === $fkName) {
             return false;
         }
@@ -1147,12 +1154,17 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         string $onDelete = 'RESTRICT',
         string $onUpdate = 'RESTRICT'
     ): bool {
+
         // 1. Sanitize and validate all identifiers and actions.
         $thisTableName = $this->getTableName();
-        $columnName = $this->cleanIdentifier($columnName);
-        $refTableName = $this->cleanIdentifier($referencedTableName);
-        $refColumnName = $this->cleanIdentifier($referencedColumnName);
-        $constraintName = $this->cleanIdentifier($constraintName ?? $this->generateIndexName($columnName, 'fk'));
+        $columnName = Util::cleanSqlIdentifier($columnName);
+        $refTableName = Util::cleanSqlIdentifier($referencedTableName);
+        $refColumnName = Util::cleanSqlIdentifier($referencedColumnName);
+        $constraintName = Util::cleanSqlIdentifier($constraintName ?? Util::generateSqlIndexName(
+            $this->getTableName(false),
+            $columnName,
+            'fk'
+        ));
 
         if (empty($columnName) || empty($refTableName) || empty($refColumnName) || empty($constraintName)) {
             $this->logger?->warning(
@@ -1225,7 +1237,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function dropForeignKey(string $fkName): bool
     {
-        $constraintName = $this->cleanIdentifier($fkName);
+        $constraintName = Util::cleanSqlIdentifier($fkName);
         if (empty($constraintName)) {
             return false;
         }
@@ -1250,88 +1262,6 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         }
 
         return $hasDropped;
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Utility & Helper Methods
-    |--------------------------------------------------------------------------
-    */
-
-    /**
-     * Generate an index name.
-     *
-     * @param string|array<int, string> $columnNames Column names.
-     * @param string $prefix Index type prefix.
-     *
-     * @return string
-     */
-    final protected function generateIndexName(string|array $columnNames, string $prefix = 'idx'): string
-    {
-        $tableName = $this->stripTablePrefix($this->getTableName(), true, false);
-        $columnNames = is_array($columnNames) ? $columnNames : [$columnNames];
-        $columnNames = $this->cleanIdentifier(implode('_', $columnNames));
-        $idxName = sprintf('%s_%s_%s', $prefix, $tableName, $columnNames);
-        // If the name is too long, truncate and add a short hash to ensure uniqueness.
-        if (strlen($idxName) > 64) {
-            $hash = substr(md5($idxName), 0, 8);
-            $idxName = substr($idxName, 0, 64 - strlen($hash) - 1) . '_' . $hash;
-        }
-
-        return $idxName;
-    }
-
-    /**
-     * Cleans a string to be safely used as a database identifier.
-     *
-     * @param string $identifier The raw identifier to be sanitized.
-     * @return string The sanitized identifier.
-     */
-    final protected function cleanIdentifier(string $identifier): string
-    {
-        $cleaned = preg_replace('/[^A-Za-z0-9_]/', '', $identifier);
-        if (empty($cleaned)) {
-            return '_';
-        }
-        if (is_numeric($cleaned[0])) {
-            $cleaned = '_' . $cleaned;
-        }
-
-        if ($cleaned !== $identifier) {
-            $this->logger?->warning('The table identifier {invalid_name} was sanitized to {sanitized_name}.', [
-                'invalid_name' => $identifier,
-                'sanitized_name' => $cleaned,
-                'table' => $this->getTableName(),
-                'when_installing' => $this->versionBeingInstalled,
-                'site_id' => $this->getCurrentSiteId()
-            ]);
-        }
-
-        return $cleaned;
-    }
-
-    /**
-     * Strips table prefixes from a table name.
-     *
-     * @param string $tableName The table name to strip prefixes from.
-     * @param bool $stripWpPrefix Whether to strip the WordPress prefix.
-     * @param bool $stripPluginPrefix Whether to strip the plugin prefix.
-     * @return string The stripped table name.
-     */
-    private function stripTablePrefix(
-        string $tableName,
-        bool $stripWpPrefix = true,
-        bool $stripPluginPrefix = true
-    ): string {
-        $tableName = trim($tableName);
-        if ($stripWpPrefix && str_starts_with($tableName, $this->getTablePrefix(true, false))) {
-            $tableName = substr($tableName, strlen($this->getTablePrefix(true, false)));
-        }
-        if ($stripPluginPrefix && str_starts_with($tableName, $this->pluginPrefix)) {
-            $tableName = substr($tableName, strlen($this->pluginPrefix));
-        }
-
-        return $tableName;
     }
 
     /*
