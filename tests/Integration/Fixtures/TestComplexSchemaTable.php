@@ -21,6 +21,7 @@ class TestComplexSchemaTable extends Table
     protected function migrateTo10001(): bool
     {
         return $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             // Numeric types
             $table->tinyInteger('tiny_int');
             $table->smallInteger('small_int');

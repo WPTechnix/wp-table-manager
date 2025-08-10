@@ -21,6 +21,7 @@ class TestSanitizationTable extends Table
     protected function migrateTo10001(): bool
     {
         $result = $this->createTable(closure: function (CreateTableSchema $table) {
+            $table->id();
             $table->string('normal_column', 100);
             $table->string('321create', 100); // should become _321create.
             $table->string('column-with-special-chars@create!', 100); // columnwithspecialcharscreate

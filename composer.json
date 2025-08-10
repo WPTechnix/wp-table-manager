@@ -48,7 +48,7 @@
             "@lint:phpcs",
             "@lint:phpstan"
         ],
-		"setup:phpunit": "bash bin/install-wp-tests wordpress_tests wordpress wordpress db latest true",
+    		"setup:phpunit": "bash bin/install-wp-tests wordpress_tests wordpress wordpress db latest true",
         "test": [
             "@mkdir-reports",
             "vendor/bin/phpunit --testdox --colors"

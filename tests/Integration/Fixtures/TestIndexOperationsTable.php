@@ -21,6 +21,7 @@ class TestIndexOperationsTable extends Table
     protected function migrateTo10001(): bool
     {
         $result = $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->string('email', 191);
             $table->string('status', 50);
             $table->integer('priority');

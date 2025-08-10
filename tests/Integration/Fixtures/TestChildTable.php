@@ -29,6 +29,7 @@ class TestChildTable extends Table
     protected function migrateTo10001(): bool
     {
         $result = $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->bigInteger('parent_id')->unsigned();
             $table->bigInteger('other_parent_id')->unsigned()->nullable();
             $table->string('name', 100);

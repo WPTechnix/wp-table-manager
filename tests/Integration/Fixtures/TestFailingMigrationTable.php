@@ -23,6 +23,7 @@ class TestFailingMigrationTable extends Table
     protected function migrateTo10001(): bool
     {
         return $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->string('name', 100);
             return $table;
         });

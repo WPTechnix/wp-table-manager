@@ -1,5 +1,10 @@
 #!/bin/bash
-# Directly copied logic from bin/git-hooks/pre-commit
+
+# Do not run on CI environments (e.g., GitHub Actions)
+if [ "$CI" = "true" ]; then
+  echo "CI environment detected. Skipping pre-push checks."
+  exit 0
+fi
 
 # Get staged file list
 # Use --diff-filter=d to exclude deleted files
@@ -24,7 +29,7 @@ fi
 # Ensure vendor is available
 if [ ! -d "vendor" ]; then
   echo "Vendor directory not found. Running composer install..."
-  $COMPOSER_CMD install
+  $COMPOSER_CMD install --no-interaction --prefer-dist --no-progress
 fi
 
 # Run checks
@@ -40,3 +45,5 @@ echo "Running phpstan..."
 $COMPOSER_CMD lint:phpstan
 
 echo "✅ Pre-commit checks passed."
+
+exit 0

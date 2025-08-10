@@ -21,6 +21,7 @@ class TestMigrationTable extends Table
     protected function migrateTo10001(): bool
     {
         return $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->string('title', 200)->notNull();
             return $table;
         });

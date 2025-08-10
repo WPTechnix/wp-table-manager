@@ -6,16 +6,37 @@ on:
     paths-ignore:
       # ignore markdowns and unrelated files
       - '**.md'
-      - 'docs/**'
       - 'docker/**'
+      - '.husky/**'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.release-it.json'
+      - 'bin/copy'
+      - 'bin/docker'
+      - 'bin/composer'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/commitlint.yml'
+      - '.github/workflows/release.yml'
 
   pull_request:
     branches: [ main, 'release/**' ]
     paths-ignore:
       # ignore markdowns and unrelated files
       - '**.md'
-      - 'docs/**'
       - 'docker/**'
+      - '.husky/**'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.release-it.json'
+      - 'bin/copy'
+      - 'bin/docker'
+      - 'bin/composer'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/commitlint.yml'
+      - '.github/workflows/release.yml'
+
 jobs:
   # PHPCS - Test with both minimum and maximum PHP versions
   # This ensures coding standards work with different dependency versions
@@ -110,6 +131,68 @@ jobs:
 
       - name: Run PHPStan
         run: ./vendor/bin/phpstan analyse --no-progress --error-format=github
+
+
+  # Test against multiple PHP versions with their respective dependencies
+  phpunit-php-versions:
+    name: PHPUnit (PHP ${{ matrix.php-version }}, WP ${{ matrix.wordpress-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: [8.0, 8.1, 8.2, 8.3, 8.4]
+        wordpress-version: ['latest']
+        include:
+          # Test minimum PHP with minimum supported WordPress
+          - php-version: 8.0
+            wordpress-version: '6.4'
+          # Test maximum PHP with latest WordPress
+          - php-version: 8.4
+            wordpress-version: 'trunk'
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wordpress_tests
+          MYSQL_USER: wordpress
+          MYSQL_PASSWORD: wordpress
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer
+          coverage: none
+          extensions: mysqli
+
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-php${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.json') }}
+          restore-keys: ${{ runner.os }}-php${{ matrix.php-version }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Setup System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y subversion default-mysql-client
+
+      - name: Install WordPress Test Suite
+        run: |
+          ./bin/install-wp-tests wordpress_tests wordpress wordpress 127.0.0.1 ${{ matrix.wordpress-version }}
 
   phpunit-db-versions:
     name: PHPUnit (${{ matrix.db-name }})

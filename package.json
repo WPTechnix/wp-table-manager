@@ -16,7 +16,8 @@
     "test": "tests"
   },
   "scripts": {
-    "prepare": "npx husky init"
+    "prepare": "husky",
+    "release": "release-it"
   },
   "commitlint": {
     "extends": [

@@ -1,9 +1,6 @@
 #!/bin/bash
 # Husky pre-push hook
 # This script runs unit tests before allowing a push to the remote repository.
-
-# Exit immediately if a command exits with a non-zero status.
-
 echo "🔍 Running pre-push checks..."
 
 # --- Find Composer Command ---

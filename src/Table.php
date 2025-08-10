@@ -384,10 +384,9 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     final protected function createTable(Closure $closure): bool
     {
-        $builder = new CreateTableSchema($this->getTableName(), $this->wpdb);
-        $builder->ifNotExists();
-        $builder->id($this->primaryKeyColumn);
-        $result = $closure($builder);
+        $schema = new CreateTableSchema($this->getTableName(), $this->wpdb);
+        $schema->ifNotExists();
+        $result = $closure($schema);
         $succeeded = false !== $this->wpdb->query($result instanceof CreateTableSchema ? $result->toSql() : $result);
         if (!$succeeded) {
             $this->logger?->error('Failed to create table.', [

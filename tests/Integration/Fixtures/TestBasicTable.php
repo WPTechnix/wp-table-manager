@@ -21,7 +21,7 @@ class TestBasicTable extends Table
     protected function migrateTo10001(): bool
     {
          return $this->createTable(function (CreateTableSchema $table) {
-             // Note: The id column is automatically added by CreateTableSchema->id() in createTable
+             $table->id();
              $table->string('name', 100)->notNull();
              $table->string('email', 191)->unique();
              $table->datetime('created_at')->nullable();

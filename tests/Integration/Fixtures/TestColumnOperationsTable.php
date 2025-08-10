@@ -21,6 +21,7 @@ class TestColumnOperationsTable extends Table
     protected function migrateTo10001(): bool
     {
         $result = $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->string('name', 100);
             $table->string('obsolete_column', 50);
             return $table;

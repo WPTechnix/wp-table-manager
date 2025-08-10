@@ -21,6 +21,7 @@ class TestParentTable extends Table
     protected function migrateTo10001(): bool
     {
         return $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->string('name', 100);
             // Ensure InnoDB for foreign key references
             $table->engine('InnoDB');

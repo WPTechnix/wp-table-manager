@@ -21,6 +21,7 @@ class TestCompatibilityTable extends Table
     protected function migrateTo10001(): bool
     {
         return $this->createTable(function (CreateTableSchema $table) {
+            $table->id();
             $table->string('test', 100);
             return $table;
         });

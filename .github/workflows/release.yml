@@ -31,6 +31,11 @@ jobs:
       - name: Install npm dependencies
         run: npm install
 
+      - name: Check for uncommitted changes
+        run: |
+          echo "Running git status to check for modified files..."
+          git status
+
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
