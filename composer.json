@@ -1,6 +1,6 @@
 {
     "name": "wptechnix/wp-table-manager",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "A simple description.",
     "type": "library",
     "license": "MIT",
@@ -16,7 +16,7 @@
     "require": {
         "php": ">=8.0",
         "psr/log": "^1.1 || ^2.0 | ^3.0"
-     },
+    },
     "require-dev": {
         "php-stubs/wordpress-tests-stubs": "^6.8",
         "phpcompatibility/php-compatibility": "*",
@@ -48,7 +48,7 @@
             "@lint:phpcs",
             "@lint:phpstan"
         ],
-    		"setup:phpunit": "bash bin/install-wp-tests wordpress_tests wordpress wordpress db latest true",
+        "setup:phpunit": "bash bin/install-wp-tests wordpress_tests wordpress wordpress db latest true",
         "test": [
             "@mkdir-reports",
             "vendor/bin/phpunit --testdox --colors"
