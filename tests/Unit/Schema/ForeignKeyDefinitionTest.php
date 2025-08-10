@@ -16,6 +16,7 @@ use WPTechnix\WPTableManager\Exceptions\SchemaException;
  * Class ForeignKeyDefinitionTest
  *
  * @covers \WPTechnix\WPTableManager\Schema\ForeignKeyDefinition
+ * @uses \WPTechnix\WPTableManager\Util
  */
 final class ForeignKeyDefinitionTest extends WP_UnitTestCase
 {

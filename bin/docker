@@ -80,7 +80,10 @@ run_in_container() {
     if [ -t 0 ]; then
         exec_flags+=("-it")
     fi
-    exec_flags+=("-w" "$DOCKER_WORKDIR")
+
+    if [ "$DEFAULT_SERVICE" = "$service" ]; then
+      exec_flags+=("-w" "$DOCKER_WORKDIR")
+    fi
 
     echo "--- Running in '$service': ${cmd_array[*]} ---"
     exec docker exec "${exec_flags[@]}" "$container_id" "${cmd_array[@]}"

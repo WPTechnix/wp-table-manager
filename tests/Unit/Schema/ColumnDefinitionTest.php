@@ -17,6 +17,7 @@ use WP_UnitTestCase;
  * Class ColumnDefinitionTest
  *
  * @covers \WPTechnix\WPTableManager\Schema\ColumnDefinition
+ * @uses \WPTechnix\WPTableManager\Util
  */
 final class ColumnDefinitionTest extends WP_UnitTestCase
 {

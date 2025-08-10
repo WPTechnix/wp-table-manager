@@ -127,7 +127,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      *
      * @var  array<string, int>
      */
-    protected ?array $tableVersions = [];
+    protected ?array $tableVersions;
 
     /**
      * The cached MySQL/MariaDB version number.
@@ -485,7 +485,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         if ($this->isMultisiteShared()) {
             update_site_option($this->tableVersionsOptionName, $this->tableVersions);
         } else {
-            update_option($this->tableVersionsOptionName, $this->tableVersions, false);
+            update_option($this->tableVersionsOptionName, $this->tableVersions);
         }
 
         // Log version update
@@ -506,8 +506,8 @@ abstract class Table implements TableInterface, LoggerAwareInterface
         $isShared = $this->isMultisiteShared();
         if (!isset($this->tableVersions)) {
             $optionValue = $isShared
-                ? get_site_option($this->tableVersionsOptionName, [])
-                : get_option($this->tableVersionsOptionName, []);
+                ? get_site_option($this->tableVersionsOptionName)
+                : get_option($this->tableVersionsOptionName);
             $this->tableVersions = is_array($optionValue) ? $optionValue : [];
         }
 

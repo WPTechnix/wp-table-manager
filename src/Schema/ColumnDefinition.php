@@ -154,7 +154,6 @@ class ColumnDefinition
         protected string $type
     ) {
         $this->name = Util::cleanSqlIdentifier($this->name);
-        $this->type = $type;
     }
 
     /**

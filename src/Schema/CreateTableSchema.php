@@ -123,19 +123,21 @@ class CreateTableSchema
     }
 
     /**
-     * Get Full table Name
+     * Get table name with or without $wpdb prefix.
      *
-     * @param $withWpdbPrefix With Wpdb Prefix.
+     * @param bool $withWpdbPrefix Whether to include $wpdb prefix.
+     * @return string The table name with or without prefix.
      */
     public function getTableName(bool $withWpdbPrefix = true): string
     {
         $tableName = $this->tableName;
 
-        if ($withWpdbPrefix && str_starts_with($this->tableName, $this->wpdb->prefix)) {
-            return substr($tableName, 0, strlen($this->wpdb->prefix));
-        }
-        if ($withWpdbPrefix && str_starts_with($this->tableName, $this->wpdb->base_prefix)) {
-            return substr($tableName, 0, strlen($this->wpdb->base_prefix));
+        if (! $withWpdbPrefix) {
+            if (str_starts_with($tableName, $this->wpdb->prefix)) {
+                $tableName = substr($tableName, strlen($this->wpdb->prefix));
+            } elseif (str_starts_with($tableName, $this->wpdb->base_prefix)) {
+                $tableName = substr($tableName, strlen($this->wpdb->base_prefix));
+            }
         }
 
         return $tableName;

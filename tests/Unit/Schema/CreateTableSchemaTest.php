@@ -19,6 +19,10 @@ use WPTechnix\WPTableManager\Schema\CreateTableSchema;
  * Class CreateTableSchemaTest
  *
  * @covers \WPTechnix\WPTableManager\Schema\CreateTableSchema
+ * @uses \WPTechnix\WPTableManager\Schema\ColumnDefinition
+ * @uses \WPTechnix\WPTableManager\Schema\IndexDefinition
+ * @uses \WPTechnix\WPTableManager\Schema\ForeignKeyDefinition
+ * @uses \WPTechnix\WPTableManager\Util
  */
 final class CreateTableSchemaTest extends WP_UnitTestCase
 {

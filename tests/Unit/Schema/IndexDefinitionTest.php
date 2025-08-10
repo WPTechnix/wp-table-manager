@@ -15,6 +15,7 @@ use WPTechnix\WPTableManager\Schema\IndexDefinition;
  * Class IndexDefinitionTest
  *
  * @covers \WPTechnix\WPTableManager\Schema\IndexDefinition
+ * @uses \WPTechnix\WPTableManager\Util
  */
 final class IndexDefinitionTest extends WP_UnitTestCase
 {
