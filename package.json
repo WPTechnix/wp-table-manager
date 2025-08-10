@@ -16,7 +16,7 @@
     "test": "tests"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "npx husky init"
   },
   "commitlint": {
     "extends": [
