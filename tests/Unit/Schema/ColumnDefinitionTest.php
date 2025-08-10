@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Unit tests for ColumnDefinition class.
- */
-
 declare(strict_types=1);
 
 namespace WPTechnix\WPTableManager\Tests\Unit\Schema;

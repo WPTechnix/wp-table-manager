@@ -14,6 +14,7 @@ class TestIdempotentTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'idempotent';
+    protected string $tableSingularName = 'idempotent';
     protected string $tableAlias = 'ide';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'idempotent_id';

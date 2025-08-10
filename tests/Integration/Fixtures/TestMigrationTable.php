@@ -14,6 +14,7 @@ class TestMigrationTable extends Table
 {
     protected int $schemaVersion = 10003;
     protected string $tableName = 'migration';
+    protected string $tableSingularName = 'migration';
     protected string $tableAlias = 'mig';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'migration_id';

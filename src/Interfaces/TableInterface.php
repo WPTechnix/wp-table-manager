@@ -35,6 +35,13 @@ interface TableInterface
     public function getTableName(bool $withWpPrefix = true): string;
 
     /**
+     * Gets the singular name, without WordPress or plugin prefixes.
+     *
+     * @return string
+     */
+    public function getTableSingularName(): string;
+
+    /**
      * Gets the table alias used in queries.
      *
      * @return string Table alias.

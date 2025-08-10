@@ -14,6 +14,7 @@ class TestCompatibilityTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'compat';
+    protected string $tableSingularName = 'compat';
     protected string $tableAlias = 'cmp';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'compat_id';

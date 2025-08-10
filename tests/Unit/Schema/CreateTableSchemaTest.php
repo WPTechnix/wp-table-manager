@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Unit tests for the CreateTableSchema class.
- * This file provides comprehensive testing for all public methods.
- */
-
 declare(strict_types=1);
 
 namespace WPTechnix\WPTableManager\Tests\Unit\Schema;
@@ -377,11 +372,13 @@ final class CreateTableSchemaTest extends WP_UnitTestCase
         $this->schema->bigInteger('post_id')->unsigned();
 
         $this->schema->foreign('user_id')
-            ->references('users', 'id')
+            ->references('id')
+            ->on('users')
             ->cascadeOnDelete();
 
         $this->schema->foreign('post_id', 'fk_test_table_post_id')
-            ->references('posts') // 'id' column is default
+            ->references('id')
+            ->on('posts')
             ->onUpdate('cascade')
             ->onDelete('restrict');
 

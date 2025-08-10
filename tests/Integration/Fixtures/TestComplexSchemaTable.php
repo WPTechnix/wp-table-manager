@@ -14,6 +14,7 @@ class TestComplexSchemaTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'complex';
+    protected string $tableSingularName = 'complex';
     protected string $tableAlias = 'com';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'complex_id';

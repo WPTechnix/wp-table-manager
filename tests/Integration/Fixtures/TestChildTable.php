@@ -15,6 +15,7 @@ class TestChildTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'child';
+    protected string $tableSingularName = 'child';
     protected string $tableAlias = 'chi';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'child_id';

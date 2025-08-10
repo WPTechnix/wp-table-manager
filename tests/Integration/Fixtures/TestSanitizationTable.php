@@ -14,6 +14,7 @@ class TestSanitizationTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'sanitize';
+    protected string $tableSingularName = 'sanitize';
     protected string $tableAlias = 'san';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'sanitize_id';

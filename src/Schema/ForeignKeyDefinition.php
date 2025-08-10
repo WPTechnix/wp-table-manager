@@ -65,15 +65,31 @@ class ForeignKeyDefinition
     /**
      * Set the referenced table and column.
      *
-     * @param string $table  Referenced table.
      * @param string $column Referenced column.
-     *
-     * @return $this
+     * @param null|string $tableName Referenced table name.
+     * @return static
      */
-    public function references(string $table, string $column = 'id'): self
+    public function references(string $column, ?string $tableName = null): static
     {
-        $this->referencesTable = $table;
         $this->referencesColumn = $column;
+        if (isset($tableName)) {
+            // FIXED: Was assigning $column instead of $tableName.
+            $this->referencesTable = $tableName;
+        }
+
+        return $this;
+    }
+
+    /**
+     * Sets the referenced table.
+     *
+     * @param string $tableName Referenced table name.
+     *
+     * @return static
+     */
+    public function on(string $tableName): static
+    {
+        $this->referencesTable = $tableName;
         return $this;
     }
 
@@ -82,11 +98,11 @@ class ForeignKeyDefinition
      *
      * @param string $action Action (CASCADE, SET NULL, RESTRICT, NO ACTION, SET DEFAULT).
      *
-     * @return $this
+     * @return static
      *
      * @throws SchemaException If an invalid action is provided.
      */
-    public function onDelete(string $action): self
+    public function onDelete(string $action): static
     {
         $action = strtoupper($action);
         if (!in_array($action, self::VALID_ACTIONS, true)) {
@@ -103,11 +119,11 @@ class ForeignKeyDefinition
      *
      * @param string $action Action (CASCADE, SET NULL, RESTRICT, NO ACTION, SET DEFAULT).
      *
-     * @return $this
+     * @return static
      *
      * @throws SchemaException If an invalid action is provided.
      */
-    public function onUpdate(string $action): self
+    public function onUpdate(string $action): static
     {
         $action = strtoupper($action);
         if (!in_array($action, self::VALID_ACTIONS, true)) {
@@ -122,9 +138,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON DELETE CASCADE.
      *
-     * @return $this
+     * @return static
      */
-    public function cascadeOnDelete(): self
+    public function cascadeOnDelete(): static
     {
         return $this->onDelete('CASCADE');
     }
@@ -132,9 +148,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON UPDATE CASCADE.
      *
-     * @return $this
+     * @return static
      */
-    public function cascadeOnUpdate(): self
+    public function cascadeOnUpdate(): static
     {
         return $this->onUpdate('CASCADE');
     }
@@ -142,9 +158,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for both ON DELETE and ON UPDATE CASCADE.
      *
-     * @return $this
+     * @return static
      */
-    public function cascade(): self
+    public function cascade(): static
     {
         return $this->cascadeOnDelete()->cascadeOnUpdate();
     }
@@ -152,9 +168,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON DELETE RESTRICT.
      *
-     * @return $this
+     * @return static
      */
-    public function restrictOnDelete(): self
+    public function restrictOnDelete(): static
     {
         return $this->onDelete('RESTRICT');
     }
@@ -162,9 +178,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON UPDATE RESTRICT.
      *
-     * @return $this
+     * @return static
      */
-    public function restrictOnUpdate(): self
+    public function restrictOnUpdate(): static
     {
         return $this->onUpdate('RESTRICT');
     }
@@ -172,9 +188,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for both ON DELETE and ON UPDATE RESTRICT.
      *
-     * @return $this
+     * @return static
      */
-    public function restrict(): self
+    public function restrict(): static
     {
         return $this->restrictOnDelete()->restrictOnUpdate();
     }
@@ -182,9 +198,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON DELETE SET NULL.
      *
-     * @return $this
+     * @return static
      */
-    public function nullOnDelete(): self
+    public function nullOnDelete(): static
     {
         return $this->onDelete('SET NULL');
     }
@@ -192,9 +208,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON UPDATE SET NULL.
      *
-     * @return $this
+     * @return static
      */
-    public function nullOnUpdate(): self
+    public function nullOnUpdate(): static
     {
         return $this->onUpdate('SET NULL');
     }
@@ -202,9 +218,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON DELETE NO ACTION.
      *
-     * @return $this
+     * @return static
      */
-    public function noActionOnDelete(): self
+    public function noActionOnDelete(): static
     {
         return $this->onDelete('NO ACTION');
     }
@@ -212,9 +228,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for ON UPDATE NO ACTION.
      *
-     * @return $this
+     * @return static
      */
-    public function noActionOnUpdate(): self
+    public function noActionOnUpdate(): static
     {
         return $this->onUpdate('NO ACTION');
     }
@@ -222,9 +238,9 @@ class ForeignKeyDefinition
     /**
      * Shortcut for both ON DELETE and ON UPDATE NO ACTION.
      *
-     * @return $this
+     * @return static
      */
-    public function noAction(): self
+    public function noAction(): static
     {
         return $this->noActionOnDelete()->noActionOnUpdate();
     }

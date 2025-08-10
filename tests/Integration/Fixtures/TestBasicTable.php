@@ -14,6 +14,7 @@ class TestBasicTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'basic';
+    protected string $tableSingularName = 'basic';
     protected string $tableAlias = 'bas';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'basic_id';

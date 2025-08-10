@@ -83,6 +83,15 @@ abstract class Table implements TableInterface, LoggerAwareInterface
     protected string $tableName;
 
     /**
+     * The singular name of table, without WordPress or plugin prefixes.
+     *
+     * Must be defined in the child class.
+     *
+     * @var string
+     */
+    protected string $tableSingularName;
+
+    /**
      * A short, unique alias for the table, primarily for use in complex SQL JOINs.
      * Must be defined in the child class.
      *
@@ -192,9 +201,15 @@ abstract class Table implements TableInterface, LoggerAwareInterface
      */
     public function __construct(protected wpdb $wpdb, ?string $pluginPrefix = null)
     {
-        if (empty($this->tableName) || empty($this->primaryKeyColumn) || empty($this->foreignKeyName)) {
+        if (
+            empty($this->tableName) ||
+            empty($this->primaryKeyColumn) ||
+            empty($this->foreignKeyName) ||
+            empty($this->tableSingularName)
+        ) {
             throw new LogicException(
-                static::class . ' must declare the $tableName, $primaryKeyColumn, and $foreignKeyName properties.'
+                static::class . ' must declare the $tableName, $tableSingularName, $primaryKeyColumn' .
+                ', and $foreignKeyName properties.'
             );
         }
 
@@ -208,9 +223,13 @@ abstract class Table implements TableInterface, LoggerAwareInterface
             );
         }
 
-        $pluginPrefix = Util::cleanSqlIdentifier($this->pluginPrefix);
+        $this->tableSingularName = Util::cleanSqlIdentifier($this->tableSingularName);
+
+        $this->pluginPrefix = Util::cleanSqlIdentifier($this->pluginPrefix);
 
         $this->tableVersionsOptionName = $this->pluginPrefix . '_table_versions';
+
+        $this->wpdb->{$this->getTableSingularName()} = $this->getTableName();
     }
 
     /*
@@ -249,6 +268,15 @@ abstract class Table implements TableInterface, LoggerAwareInterface
 
         return Util::cleanSqlIdentifier($baseName);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTableSingularName(): string
+    {
+        return $this->tableSingularName;
+    }
+
 
     /**
      * {@inheritdoc}
@@ -403,7 +431,7 @@ abstract class Table implements TableInterface, LoggerAwareInterface
     /*
     |--------------------------------------------------------------------------
     | Core Table & Migration Methods
-   |--------------------------------------------------------------------------
+    |--------------------------------------------------------------------------
     */
 
     /**

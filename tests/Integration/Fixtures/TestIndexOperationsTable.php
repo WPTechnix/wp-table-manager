@@ -14,6 +14,7 @@ class TestIndexOperationsTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'indexes';
+    protected string $tableSingularName = 'indexes';
     protected string $tableAlias = 'idx';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'index_id';

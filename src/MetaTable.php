@@ -10,9 +10,6 @@ use wpdb;
 
 /**
  * Abstract Meta Table Class.
- *
- * Provides a standardized, reusable foundation for creating WordPress-style
- * meta tables that are linked to a parent table.
  */
 abstract class MetaTable extends Table
 {
@@ -24,59 +21,79 @@ abstract class MetaTable extends Table
     protected int $schemaVersion = 10001;
 
     /**
-     * Primary key column.
+     * Primary key column
      *
      * @var string
      */
     protected string $primaryKeyColumn = 'meta_id';
 
     /**
-     * MetaTable constructor.
+     * Foreign column name.
      *
-     * @param TableInterface $parentTable Parent table object.
-     * @param wpdb           $wpdb The WordPress database object.
-     * @param string|null    $pluginPrefix The plugin prefix.
+     * @var string
+     */
+    protected string $foreignColumnName;
+
+    /**
+     * The action to perform when parent row deleted having child
+     * rows in meta table.
+     *
+     * @var null|string
+     * @phpstan-var null|('RESTRICT'|'CASCADE'|'SET NULL'|'NO ACTION'|'SET DEFAULT')
+     */
+    protected ?string $onDeleteAction = 'RESTRICT';
+
+    /**
+     * Meta Table Constructor.
+     *
+     * @param TableInterface $parentTable Parent Table.
+     * @param wpdb $wpdb WP Database object.
+     * @param string|null $pluginPrefix Plugin Prefix.
      */
     public function __construct(
         protected TableInterface $parentTable,
         wpdb $wpdb,
         ?string $pluginPrefix = null
     ) {
+
+        $this->tableSingularName = $this->getTableSingularName() . 'meta';
+        $this->tableName = $this->tableSingularName;
+
         parent::__construct($wpdb, $pluginPrefix);
+
+        $this->foreignColumnName  = $this->pluginPrefix . $this->parentTable->getTableSingularName() . '_id';
+
+        $this->wpdb->{$this->getTableSingularName() . 'meta'} = $this->getTableName();
     }
 
     /**
-     * Creates the initial schema for the meta table.
-     *
-     * This migration sets up a standard meta table structure with columns for
-     * the object ID, meta key, and meta value, along with appropriate indexes
-     * and a foreign key constraint to the parent table.
-     *
-     * @return bool True on success, false on failure.
+     * Create Meta Table.
      */
-    final protected function migrateTo10001(): bool
+    protected function migrateTo10001(): bool
     {
         return $this->createTable(function (CreateTableSchema $schema) {
 
-            $schema->id($this->primaryKeyColumn);
+            $schema->id($this->getPrimaryKey());
 
-            // 1. Add the foreign key column that links to the parent table.
-            $foreignKeyColumn = $this->parentTable->getForeignKeyName();
-            $schema->bigInteger($foreignKeyColumn)->unsigned();
+            $schema
+                ->bigInteger($this->foreignColumnName)
+                ->unsigned()
+                ->index($this->foreignColumnName);
 
-            // 2. Add the standard meta_key and meta_value columns.
-            $schema->string('meta_key', 191)->nullable();
+            // Add the standard meta_key and meta_value columns.
+            $schema->string('meta_key', 191)->index('meta_key');
             $schema->longText('meta_value')->nullable();
 
-            // 3. Add a composite index for performance.
-            // This is crucial for efficiently querying meta by object ID and key.
-            $schema->index([$foreignKeyColumn, 'meta_key']);
+            // Add a foreign key constraint to the parent table for data integrity.
+            $fk = $schema->foreign($this->foreignColumnName)
+                         ->references(
+                             $this->parentTable->getTableName(),
+                             $this->parentTable->getPrimaryKey()
+                         );
 
-            // 4. Add the foreign key constraint for data integrity.
-            // This ensures that meta records are deleted if the parent record is deleted.
-            $schema->foreign($foreignKeyColumn)
-                   ->references($this->parentTable->getTableName(), $this->parentTable->getPrimaryKey())
-                   ->cascadeOnDelete();
+            if (isset($this->onDeleteAction)) {
+                $fk->onDelete($this->onDeleteAction);
+            }
 
             return $schema;
         });

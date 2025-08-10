@@ -14,6 +14,7 @@ class TestFailingMigrationTable extends Table
 {
     protected int $schemaVersion = 10003;
     protected string $tableName = 'failing';
+    protected string $tableSingularName = 'failing';
     protected string $tableAlias = 'fai';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'failing_id';

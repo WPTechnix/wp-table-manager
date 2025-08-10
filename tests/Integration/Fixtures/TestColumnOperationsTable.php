@@ -14,6 +14,7 @@ class TestColumnOperationsTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'columns';
+    protected string $tableSingularName = 'columns';
     protected string $tableAlias = 'col';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'column_id';

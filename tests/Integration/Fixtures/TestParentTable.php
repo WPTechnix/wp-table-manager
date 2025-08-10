@@ -14,6 +14,7 @@ class TestParentTable extends Table
 {
     protected int $schemaVersion = 10001;
     protected string $tableName = 'parent';
+    protected string $tableSingularName = 'parent';
     protected string $tableAlias = 'par';
     protected string $primaryKeyColumn = 'id';
     protected string $foreignKeyName = 'parent_id';
