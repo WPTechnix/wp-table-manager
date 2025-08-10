@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace WPTechnix\WPTableManager\Schema;
 
+use WPTechnix\WPTableManager\Util;
+
 /**
  * Class ColumnDefinition
  *
@@ -15,20 +17,6 @@ namespace WPTechnix\WPTableManager\Schema;
  */
 class ColumnDefinition
 {
-    /**
-     * Column name.
-     *
-     * @var string
-     */
-    protected string $name;
-
-    /**
-     * Column type.
-     *
-     * @var string
-     */
-    protected string $type;
-
     /**
      * Whether the column is nullable.
      *
@@ -161,10 +149,11 @@ class ColumnDefinition
      * @param string $name Column name.
      * @param string $type Column type.
      */
-    public function __construct(string $name, string $type)
-    {
-        $this->name = $name;
-        $this->type = $type;
+    public function __construct(
+        protected string $name,
+        protected string $type
+    ) {
+        $this->name = Util::cleanSqlIdentifier($this->name);
     }
 
     /**
@@ -219,8 +208,8 @@ class ColumnDefinition
         } elseif (is_numeric($value)) {
             $this->default = (string) $value;
         } else {
-            $unquotedDefaults = [ 'CURRENT_TIMESTAMP', 'NULL', 'NOW()', 'CURRENT_DATE', 'CURRENT_TIME' ];
-            $raw           = $raw || in_array(strtoupper($value), $unquotedDefaults, true);
+            $unquotedDefaults = ['CURRENT_TIMESTAMP', 'NULL', 'NOW()', 'CURRENT_DATE', 'CURRENT_TIME'];
+            $raw = $raw || in_array(strtoupper($value), $unquotedDefaults, true);
             $this->default = $raw ? $value : "'" . addslashes($value) . "'";
         }
         return $this;
@@ -422,7 +411,7 @@ class ColumnDefinition
     public function virtualAs(string $expression): self
     {
         $this->generated = $expression;
-        $this->stored    = false;
+        $this->stored = false;
         return $this;
     }
 
@@ -436,7 +425,7 @@ class ColumnDefinition
     public function storedAs(string $expression): self
     {
         $this->generated = $expression;
-        $this->stored    = true;
+        $this->stored = true;
         return $this;
     }
 
@@ -449,7 +438,7 @@ class ColumnDefinition
      */
     public function toSql(bool $isPartOfCompositePrimaryKey = false): string
     {
-        $parts = [ sprintf('`%s` %s', $this->name, $this->type) ];
+        $parts = [sprintf('`%s` %s', $this->name, $this->type)];
 
         // Add column modifiers in proper order.
         if ($this->unsigned) {
@@ -475,7 +464,7 @@ class ColumnDefinition
         // Generated column.
         if ($this->generated !== null) {
             $generationType = $this->stored ? 'STORED' : 'VIRTUAL';
-            $parts[]         = sprintf('GENERATED ALWAYS AS (%s) %s', $this->generated, $generationType);
+            $parts[] = sprintf('GENERATED ALWAYS AS (%s) %s', $this->generated, $generationType);
         }
 
         // NULL/NOT NULL.

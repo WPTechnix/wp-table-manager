@@ -16,8 +16,9 @@ use WPTechnix\WPTableManager\Exceptions\SchemaException;
  * Class ForeignKeyDefinitionTest
  *
  * @covers \WPTechnix\WPTableManager\Schema\ForeignKeyDefinition
+ * @uses \WPTechnix\WPTableManager\Util
  */
-class ForeignKeyDefinitionTest extends WP_UnitTestCase
+final class ForeignKeyDefinitionTest extends WP_UnitTestCase
 {
     /**
      * @test
@@ -389,7 +390,7 @@ class ForeignKeyDefinitionTest extends WP_UnitTestCase
             ->onUpdate('CASCADE');
 
         $expected = 'CONSTRAINT `fk_post_author` FOREIGN KEY (`author_id`) ' .
-                   'REFERENCES `wp_users` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE';
+            'REFERENCES `wp_users` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE';
         self::assertSame($expected, $fk->toSql());
     }
 
@@ -404,7 +405,6 @@ class ForeignKeyDefinitionTest extends WP_UnitTestCase
             ->cascadeOnDelete()
             ->restrictOnUpdate();
 
-        self::assertInstanceOf(ForeignKeyDefinition::class, $result);
         self::assertSame($fk, $result);
     }
 

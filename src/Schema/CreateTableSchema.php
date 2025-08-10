@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace WPTechnix\WPTableManager\Schema;
 
 use WPTechnix\WPTableManager\Exceptions\SchemaException;
+use WPTechnix\WPTableManager\Util;
 use wpdb;
 
 /**
@@ -105,18 +106,41 @@ class CreateTableSchema
     /**
      * Constructor.
      *
-     * @param string $tableName The table name.
+     * @param string $tableName The table name without wpdb prefix.
      * @param wpdb   $wpdb       The WordPress database object.
      */
-    public function __construct(protected string $tableName, protected wpdb $wpdb)
-    {
+    public function __construct(
+        protected string $tableName,
+        protected wpdb $wpdb
+    ) {
         // Set defaults from wpdb if available.
-        if (! empty($this->wpdb->charset)) {
+        if (!empty($this->wpdb->charset)) {
             $this->charset = $this->wpdb->charset;
         }
-        if (! empty($this->wpdb->collate)) {
+        if (!empty($this->wpdb->collate)) {
             $this->collation = $this->wpdb->collate;
         }
+    }
+
+    /**
+     * Get table name with or without $wpdb prefix.
+     *
+     * @param bool $withWpdbPrefix Whether to include $wpdb prefix.
+     * @return string The table name with or without prefix.
+     */
+    public function getTableName(bool $withWpdbPrefix = true): string
+    {
+        $tableName = $this->tableName;
+
+        if (! $withWpdbPrefix) {
+            if (str_starts_with($tableName, $this->wpdb->prefix)) {
+                $tableName = substr($tableName, strlen($this->wpdb->prefix));
+            } elseif (str_starts_with($tableName, $this->wpdb->base_prefix)) {
+                $tableName = substr($tableName, strlen($this->wpdb->base_prefix));
+            }
+        }
+
+        return $tableName;
     }
 
     /**
@@ -685,7 +709,7 @@ class CreateTableSchema
     {
         $this->bigInteger("{$name}_id")->unsigned();
         $this->string("{$name}_type");
-        $this->index([ "{$name}_id", "{$name}_type" ]);
+        $this->index(["{$name}_id", "{$name}_type"]);
         return $this;
     }
 
@@ -700,7 +724,7 @@ class CreateTableSchema
     {
         $this->bigInteger("{$name}_id")->unsigned()->nullable();
         $this->string("{$name}_type")->nullable();
-        $this->index([ "{$name}_id", "{$name}_type" ]);
+        $this->index(["{$name}_id", "{$name}_type"]);
         return $this;
     }
 
@@ -713,7 +737,7 @@ class CreateTableSchema
      */
     public function primary(string|array $columns): self
     {
-        $this->primaryKey = is_array($columns) ? $columns : [ $columns ];
+        $this->primaryKey = is_array($columns) ? $columns : [$columns];
         return $this;
     }
 
@@ -727,8 +751,10 @@ class CreateTableSchema
      */
     public function index(string|array $columns, ?string $name = null): self
     {
-        $columns = is_array($columns) ? $columns : [ $columns ];
-        $name = $name ?? $this->generateIndexName($columns, 'idx');
+        $columns = is_array($columns) ? $columns : [$columns];
+
+        $name = $name ?? Util::generateSqlIndexName($this->getTableName(false), $columns, 'idx');
+
         $this->indexes[] = new IndexDefinition($name, $columns, 'INDEX');
         return $this;
     }
@@ -743,8 +769,10 @@ class CreateTableSchema
      */
     public function unique(string|array $columns, ?string $name = null): self
     {
-        $columns = is_array($columns) ? $columns : [ $columns ];
-        $name = $name ?? $this->generateIndexName($columns, 'uniq');
+        $columns = is_array($columns) ? $columns : [$columns];
+
+        $name = $name ?? Util::generateSqlIndexName($this->getTableName(false), $columns, 'uniq');
+
         $this->indexes[] = new IndexDefinition($name, $columns, 'UNIQUE');
         return $this;
     }
@@ -759,8 +787,10 @@ class CreateTableSchema
      */
     public function fulltext(string|array $columns, ?string $name = null): self
     {
-        $columns = is_array($columns) ? $columns : [ $columns ];
-        $name = $name ?? $this->generateIndexName($columns, 'ft');
+        $columns = is_array($columns) ? $columns : [$columns];
+
+        $name = $name ?? Util::generateSqlIndexName($this->getTableName(false), $columns, 'ft');
+
         $this->indexes[] = new IndexDefinition($name, $columns, 'FULLTEXT');
         return $this;
     }
@@ -775,8 +805,10 @@ class CreateTableSchema
      */
     public function spatial(string|array $columns, ?string $name = null): self
     {
-        $columns = is_array($columns) ? $columns : [ $columns ];
-        $name = $name ?? $this->generateIndexName($columns, 'sp');
+        $columns = is_array($columns) ? $columns : [$columns];
+
+        $name = $name ?? Util::generateSqlIndexName($this->getTableName(false), $columns, 'sp');
+
         $this->indexes[] = new IndexDefinition($name, $columns, 'SPATIAL');
         return $this;
     }
@@ -791,7 +823,8 @@ class CreateTableSchema
      */
     public function foreign(string $column, ?string $name = null): ForeignKeyDefinition
     {
-        $name = $name ?? $this->generateIndexName($column, 'fk');
+        $name = $name ?? Util::generateSqlIndexName($this->getTableName(false), $column, 'fk');
+
         $foreignKey = new ForeignKeyDefinition($name, $column);
         $this->foreignKeys[] = $foreignKey;
         return $foreignKey;
@@ -871,9 +904,9 @@ class CreateTableSchema
      */
     public function rowFormat(string $format): self
     {
-        $validFormats = [ 'DYNAMIC', 'FIXED', 'COMPRESSED', 'REDUNDANT', 'COMPACT' ];
+        $validFormats = ['DYNAMIC', 'FIXED', 'COMPRESSED', 'REDUNDANT', 'COMPACT'];
         $format = strtoupper($format);
-        if (! in_array($format, $validFormats, true)) {
+        if (!in_array($format, $validFormats, true)) {
             throw new SchemaException(
                 "Invalid row format: {$format}. Valid formats are: " . implode(', ', $validFormats)
             );
@@ -1032,32 +1065,5 @@ class CreateTableSchema
             }
         }
         return true; // Composite key or explicitly set primary key
-    }
-
-    /**
-     * Generate an index name.
-     *
-     * @param array<int, string>|string $columnNames Column names.
-     * @param string                    $prefix       Index type prefix.
-     *
-     * @return string
-     */
-    protected function generateIndexName(array|string $columnNames, string $prefix): string
-    {
-        $columnNames = is_array($columnNames) ? $columnNames : [ $columnNames ];
-        $columnNames = implode('_', $columnNames);
-        $columnNames = preg_replace('/[^A-Za-z0-9_]/', '', $columnNames);
-        $shortTableName = $this->tableName;
-        if (str_starts_with($this->tableName, $this->wpdb->prefix)) {
-            $shortTableName = substr($this->tableName, strlen($this->wpdb->prefix));
-        }
-
-        $idxName = sprintf('%s_%s_%s', $shortTableName, $columnNames, $prefix);
-        if (strlen($idxName) > 64) {
-            $hash = substr(md5($idxName), 0, 8);
-            $idxName = substr($idxName, 0, 64 - strlen($hash) - 1) . '_' . $hash;
-        }
-
-        return $idxName;
     }
 }

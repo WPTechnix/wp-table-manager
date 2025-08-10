@@ -29,9 +29,10 @@ Thumbs.db
 # Logs & Reports
 *.log
 *.tmp
+/tmp/
 /reports/
 /logs/
-/old
+/old/
 
 # Environment
 /docker/.env
