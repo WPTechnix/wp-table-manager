@@ -1,5 +1,10 @@
 # Changelog
 
+## <small>1.0.2 (2025-08-11)</small>
+
+* chore: add keywords to composer.json ([4628a19](https://github.com/WPTechnix/wp-table-manager/commit/4628a19))
+* chore: add missing description to composer.json ([23b5fed](https://github.com/WPTechnix/wp-table-manager/commit/23b5fed))
+
 ## 1.0.1 (2025-08-10)
 
 * chore: Updated composer.json description.
