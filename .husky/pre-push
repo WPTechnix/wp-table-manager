@@ -1,5 +1,12 @@
 #!/bin/bash
 # Husky pre-push hook
+
+# Do not run on CI environments (e.g., GitHub Actions)
+if [ "$CI" = "true" ]; then
+  echo "CI environment detected. Skipping pre-push checks."
+  exit 0
+fi
+
 # This script runs unit tests before allowing a push to the remote repository.
 echo "🔍 Running pre-push checks..."
 

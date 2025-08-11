@@ -1,6 +1,6 @@
 {
   "name": "wp-table-manager",
-  "description": "A simple description.",
+  "description": "A modern, fluent schema builder for creating, migrating, and managing custom WordPress database tables with a powerful, object-oriented API.",
   "license": "MIT",
   "keywords": [],
   "author": "WPTechnix <developers@wptechnix.com>",
