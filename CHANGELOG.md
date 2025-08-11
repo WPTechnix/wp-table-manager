@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>1.0.1 (2025-08-11)</small>
+
+* chore: add missing description to composer.json ([23b5fed](https://github.com/WPTechnix/wp-table-manager/commit/23b5fed))
+
 ## 1.0.0 (2025-08-10)
 
 * feat: added MetaTable and updated Table.php ([14d6b8e](https://github.com/WPTechnix/wp-table-manager/commit/14d6b8e))
