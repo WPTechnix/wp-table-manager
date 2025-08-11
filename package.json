@@ -2,7 +2,15 @@
   "name": "wp-table-manager",
   "description": "A modern, fluent schema builder for creating, migrating, and managing custom WordPress database tables with a powerful, object-oriented API.",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "wordpress",
+    "database",
+    "custom-tables",
+    "schema-builder",
+    "wpdb",
+    "migrations"
+  ],
+  "version": "1.0.1",
   "author": "WPTechnix <developers@wptechnix.com>",
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -23,6 +31,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "version": "1.0.0"
+  }
 }
